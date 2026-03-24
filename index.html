@@ -30,7 +30,7 @@
 
     /* ===== Reset ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+    html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 60px; }
     body {
       background: var(--bg); color: var(--text);
       font-family: var(--font); -webkit-font-smoothing: antialiased;
@@ -82,11 +82,12 @@
     }
     .nav-icon-btn:hover { color: var(--text); }
     .nav-cta-btn {
-      font-size: 12px; padding: 6px 14px; border-radius: 980px;
+      font-size: 12px; padding: 5px 14px; border-radius: 980px;
       background: var(--accent); color: #fff !important;
       font-weight: 500; transition: background 0.2s, transform 0.2s;
+      letter-spacing: 0;
     }
-    .nav-cta-btn:hover { background: var(--accent2); transform: scale(1.03); }
+    .nav-cta-btn:hover { background: var(--accent2); transform: scale(1.02); }
 
     /* ===== HERO ===== */
     #hero {
@@ -220,13 +221,16 @@
     .product-card {
       background: var(--bg); border-radius: 24px; overflow: hidden;
       position: relative; cursor: pointer;
-      transition: transform 0.4s var(--ease);
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
     }
-    .product-card:hover { transform: scale(0.985); }
+    .product-card:hover {
+      transform: scale(0.985) translateY(-4px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.10);
+    }
     .product-card:hover .product-card-img { transform: scale(1.03); }
     .product-card-img {
       height: 280px; display: flex; align-items: center; justify-content: center;
-      font-size: 96px; transition: transform 0.6s var(--ease);
+      font-size: 96px; transition: transform 0.6s var(--ease-out);
       position: relative; overflow: hidden;
     }
     .product-card-img.solar { background: linear-gradient(160deg, #fff8ed 0%, #fff3d6 100%); }
@@ -250,9 +254,20 @@
     .product-card-link {
       font-size: 15px; font-weight: 500; color: var(--accent);
       display: inline-flex; align-items: center; gap: 4px;
-      transition: gap 0.2s;
+      transition: gap 0.2s, color 0.2s;
     }
-    .product-card:hover .product-card-link { gap: 8px; }
+    .product-card:hover .product-card-link { gap: 8px; color: var(--accent2); }
+
+    .product-card {
+      background: var(--bg); border-radius: 24px; overflow: hidden;
+      position: relative; cursor: pointer;
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    }
+    .product-card:hover {
+      transform: scale(0.985) translateY(-4px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.10);
+    }
+    .product-card:hover .product-card-img { transform: scale(1.03); }
 
     /* ===== VALUES ===== */
     #values {
@@ -679,7 +694,7 @@
   </footer>
 
   <script>
-    // Scroll reveal
+    // ── Scroll Reveal ──
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -687,14 +702,14 @@
           revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach((el, i) => {
-      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+      el.style.transitionDelay = (i % 4) * 0.1 + 's';
       revealObserver.observe(el);
     });
 
-    // Active nav link on scroll
+    // ── Active nav on scroll ──
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
     const navObserver = new IntersectionObserver((entries) => {
@@ -705,8 +720,61 @@
           });
         }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.4 });
     sections.forEach(s => navObserver.observe(s));
+
+    // ── Hero stats counter ──
+    function animateCount(el, target, suffix) {
+      let start = null;
+      const duration = 1800;
+      function step(ts) {
+        if (!start) start = ts;
+        const p = Math.min((ts - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(ease * target) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const nums = entry.target.querySelectorAll('.intro-stat-num');
+          const data = [['500','+'],['2022',''],['30','+'],['50',' MW']];
+          nums.forEach((el, i) => {
+            if (data[i]) {
+              const raw = data[i][0];
+              const num = parseInt(raw);
+              animateCount(el, num, data[i][1]);
+            }
+          });
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const introStats = document.querySelector('.intro-stats');
+    if (introStats) statsObserver.observe(introStats);
+
+    // ── Navbar bg on scroll ──
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.background = window.scrollY > 10
+        ? 'rgba(255,255,255,0.92)'
+        : 'rgba(255,255,255,0.80)';
+    }, { passive: true });
+
+    // ── Smooth scroll for all anchor links ──
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
   </script>
 
 </body>
