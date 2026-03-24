@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="宁波元电新能源有限公司，专业提供光伏组件、智能充电桩、一体化充电站、工商业储能系统全链路解决方案，绿色能源驱动未来。"/>
-<title>宁波元电新能源有限公司 — 绿色能源，驱动未来</title>
+<meta name="description" content="瀹佹尝鍏冪數鏂拌兘婧愭湁闄愬叕鍙革紝涓撲笟鎻愪緵鍏変紡缁勪欢銆佹櫤鑳藉厖鐢垫々銆佷竴浣撳寲鍏呯數绔欍€佸伐鍟嗕笟鍌ㄨ兘绯荤粺鍏ㄩ摼璺В鍐虫柟妗堬紝缁胯壊鑳芥簮椹卞姩鏈潵銆?/>
+<title>瀹佹尝鍏冪數鏂拌兘婧愭湁闄愬叕鍙?鈥?缁胯壊鑳芥簮锛岄┍鍔ㄦ湭鏉?/title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -14,11 +14,14 @@
 html{scroll-behavior:smooth;scroll-padding-top:60px}
 body{background:#fff;color:#1d1d1f;font-family:'Inter','Noto Sans SC',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.5}
 a{color:#0071e3;text-decoration:none}
+img{max-width:100%;display:block}
 ::selection{background:#0071e3;color:#fff}
 ::-webkit-scrollbar{width:8px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:#c4c4c4;border-radius:4px}
 html:hover::-webkit-scrollbar-thumb{background:#86868b}
+
+/* NAV */
 #nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:48px;background:rgba(255,255,255,0.85);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,0.08)}
 .nav-inner{max-width:980px;margin:0 auto;padding:0 22px;height:100%;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;flex-direction:column;gap:1px;font-size:15px;font-weight:700;color:#1d1d1f;letter-spacing:0.3px;line-height:1.2}
@@ -28,6 +31,8 @@ html:hover::-webkit-scrollbar-thumb{background:#86868b}
 .nav-links a:hover,.nav-links a.active{color:#1d1d1f}
 .nav-cta-btn{font-size:12px;padding:5px 14px;border-radius:980px;background:#0071e3;color:#fff;font-weight:500;transition:all 0.2s;letter-spacing:0}
 .nav-cta-btn:hover{background:#2997ff;transform:scale(1.02)}
+
+/* HERO */
 #hero{background:#fff;text-align:center;border-bottom:1px solid #d2d2d7}
 .hero-inner{max-width:860px;margin:0 auto;padding:100px 22px 60px}
 .hero-eyebrow{font-size:13px;font-weight:600;color:#0071e3;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px;opacity:0;animation:fadeUp 0.8s ease-out 0.1s forwards}
@@ -40,12 +45,17 @@ html:hover::-webkit-scrollbar-thumb{background:#86868b}
 .hero-link.secondary{font-size:19px;font-weight:500;color:#0071e3;opacity:0.65}
 .hero-link.secondary:hover{opacity:1}
 .hero-link+.hero-link{margin-left:28px}
+.hero-divider{width:1px;height:20px;background:#0071e3;opacity:0.3;margin:0 16px;align-self:center}
+
+/* SECTION */
 .section{padding:100px 0;text-align:center}
 .section-dark{background:#1d1d1f;color:#f5f5f7}
 .section-title{font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-0.025em;line-height:1.08;margin-bottom:16px}
 .section-dark .section-title{color:#f5f5f7}
 .section-desc{font-size:clamp(17px,2vw,21px);font-weight:400;color:#86868b;line-height:1.5;max-width:600px;margin:0 auto 48px;letter-spacing:-0.01em}
 .section-dark .section-desc{color:rgba(245,245,247,0.65)}
+
+/* INTRO */
 #intro{background:#fff;padding:100px 0 80px}
 .intro-grid{max-width:980px;margin:0 auto;padding:0 22px;display:grid;grid-template-columns:1fr 1fr;gap:80px;text-align:left;align-items:center}
 .intro-label{font-size:12px;font-weight:600;color:#86868b;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px}
@@ -55,12 +65,14 @@ html:hover::-webkit-scrollbar-thumb{background:#86868b}
 .intro-stat-num{font-size:clamp(40px,5vw,56px);font-weight:700;letter-spacing:-0.03em;line-height:1;color:#1d1d1f;display:block}
 .intro-stat-label{font-size:14px;color:#86868b;margin-top:6px}
 .intro-visual{display:flex;align-items:center;justify-content:center;background:#f5f5f7;border-radius:24px;aspect-ratio:4/3;overflow:hidden}
-.intro-visual-inner{text-align:center;padding:40px}
+.intro-visual-inner{text-align:center}
 .intro-visual-svg{width:100%;height:100%}
 .intro-visual-label{font-size:12px;font-weight:600;color:#86868b;letter-spacing:3px;text-transform:uppercase;margin-top:12px}
+
+/* PRODUCTS */
 #products{background:#f5f5f7;padding:100px 0}
 .products-grid{max-width:1200px;margin:0 auto;padding:0 22px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.product-card{background:#fff;border-radius:24px;overflow:hidden;transition:transform 0.4s,box-shadow 0.4s}
+.product-card{background:#fff;border-radius:24px;overflow:hidden;position:relative;cursor:pointer;transition:transform 0.4s,box-shadow 0.4s}
 .product-card:hover{transform:translateY(-5px);box-shadow:0 24px 60px rgba(0,0,0,0.10)}
 .product-card:hover .product-card-img{transform:scale(1.04)}
 .product-card-img{height:220px;display:flex;align-items:center;justify-content:center;transition:transform 0.6s}
@@ -75,16 +87,22 @@ html:hover::-webkit-scrollbar-thumb{background:#86868b}
 .product-card-desc{font-size:15px;color:#86868b;line-height:1.65;margin-bottom:20px}
 .product-card-link{font-size:15px;font-weight:500;color:#0071e3;display:inline-flex;align-items:center;gap:4px;transition:gap 0.2s,color 0.2s}
 .product-card:hover .product-card-link{gap:8px;color:#2997ff}
+
+/* VALUES */
 #values{background:#fff;padding:100px 0}
 .values-grid{max-width:1000px;margin:0 auto;padding:0 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
 .value-card{text-align:left}
 .value-icon{font-size:44px;margin-bottom:20px;display:block}
 .value-title{font-size:20px;font-weight:600;letter-spacing:-0.01em;margin-bottom:10px}
 .value-desc{font-size:15px;color:#86868b;line-height:1.7}
+
+/* FEATURE BANNER */
 #feature-banner{background:#1d1d1f;padding:120px 0;text-align:center}
 .feature-banner-title{font-size:clamp(40px,6vw,72px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;color:#f5f5f7;margin-bottom:20px}
 .feature-banner-desc{font-size:clamp(17px,2vw,22px);color:rgba(245,245,247,0.65);margin-bottom:44px;max-width:540px;margin-left:auto;margin-right:auto}
 .feature-banner-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* CTA / CONTACT */
 #contact{background:#f5f5f7;padding:100px 0}
 .contact-inner{max-width:640px;margin:0 auto;padding:0 22px}
 .cta-title{font-size:clamp(40px,6vw,72px);font-weight:700;letter-spacing:-0.03em;line-height:1.1;margin-bottom:20px}
@@ -96,6 +114,8 @@ html:hover::-webkit-scrollbar-thumb{background:#86868b}
 .contact-item-label{font-size:11px;font-weight:600;color:#86868b;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.06em}
 .contact-item-value{font-size:15px;color:#1d1d1f}
 .contact-item-value a{color:#0071e3}
+
+/* BUTTONS */
 .btn-apple{display:inline-flex;align-items:center;gap:6px;padding:14px 28px;border-radius:980px;font-size:17px;font-weight:500;cursor:pointer;transition:all 0.2s;border:none;font-family:inherit}
 .btn-apple-primary{background:#0071e3;color:#fff}
 .btn-apple-primary:hover{background:#2997ff;transform:scale(1.03)}
@@ -103,6 +123,8 @@ html:hover::-webkit-scrollbar-thumb{background:#86868b}
 .btn-apple-outline:hover{background:#0071e3;color:#fff;transform:scale(1.03)}
 .btn-apple-white{background:#fff;color:#1d1d1f}
 .btn-apple-white:hover{background:#f5f5f7;transform:scale(1.03)}
+
+/* FOOTER */
 footer{background:#f5f5f7;border-top:1px solid #d2d2d7;padding:60px 0 40px}
 .footer-inner{max-width:980px;margin:0 auto;padding:0 22px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;margin-bottom:48px}
@@ -115,50 +137,380 @@ footer{background:#f5f5f7;border-top:1px solid #d2d2d7;padding:60px 0 40px}
 .footer-links a:hover{color:#1d1d1f}
 .footer-divider{height:1px;background:#d2d2d7;margin-bottom:24px}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#86868b;flex-wrap:wrap;gap:8px}
+
+/* BACK TO TOP */
 #back-to-top{position:fixed;bottom:32px;right:32px;z-index:999;width:44px;height:44px;border-radius:50%;background:#0071e3;color:#fff;border:none;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s,transform 0.3s,background 0.2s;box-shadow:0 4px 20px rgba(0,113,227,0.3)}
 #back-to-top.visible{opacity:1;pointer-events:auto}
 #back-to-top:hover{background:#2997ff;transform:scale(1.1)}
+
+/* REVEAL */
 .reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s,transform 0.8s}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-delay-1{transition-delay:0.1s}
 .reveal-delay-2{transition-delay:0.2s}
 .reveal-delay-3{transition-delay:0.3s}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none;z-index:1001}
+.hamburger span{display:block;width:22px;height:2px;background:#1d1d1f;border-radius:2px;transition:all 0.3s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* MOBILE MENU */
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:24px;font-weight:600;color:#1d1d1f;transition:color 0.2s}
+.mobile-menu a:hover{color:#0071e3}
+
+/* RESPONSIVE */
 @media(max-width:980px){.intro-grid{grid-template-columns:1fr;gap:48px}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
-@media(max-width:768px){.nav-links{display:none}.hero-actions{flex-direction:column;align-items:center}.products-grid,.values-grid,.contact-items{grid-template-columns:1fr}.intro-stats{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:12px;text-align:center}#back-to-top{bottom:20px;right:20px;width:40px;height:40px}}
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-links,.nav-right{display:none !important}
+  .hero-inner{padding:80px 20px 48px}
+  .hero-title{font-size:clamp(40px,10vw,72px)}
+  .hero-subtitle{font-size:clamp(22px,6vw,36px)}
+  .hero-tagline{font-size:16px;margin-bottom:28px}
+  .hero-actions{flex-direction:column;align-items:center;gap:12px}
+  .hero-link,.hero-link.secondary{font-size:17px}
+  .hero-link+.hero-link{margin-left:0}
+  .hero-divider{display:none}
+  .section{padding:72px 0}
+  .section-title{font-size:clamp(30px,7vw,48px)}
+  .section-desc{font-size:16px;margin-bottom:36px}
+  .intro-heading{font-size:clamp(24px,5vw,34px)}
+  .intro-body{font-size:14px}
+  .intro-stats{grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+  .intro-stat-num{font-size:clamp(32px,7vw,44px)}
+  .intro-stat-label{font-size:13px}
+  .intro-visual{margin-top:0}
+  .products-grid,.values-grid,.contact-items{grid-template-columns:1fr}
+  .product-card-img{height:180px}
+  .product-card-body{padding:20px 24px 28px}
+  .product-card-title{font-size:22px}
+  .product-card-desc{font-size:14px}
+  .value-icon{font-size:36px}
+  .feature-banner-title{font-size:clamp(32px,8vw,52px)}
+  .cta-title{font-size:clamp(32px,8vw,52px)}
+  .cta-desc{font-size:17px}
+  .btn-apple{font-size:16px;padding:13px 24px}
+  .contact-card{padding:28px 24px}
+  .contact-card-title{font-size:20px;margin-bottom:20px}
+  .contact-items{grid-template-columns:1fr;gap:16px}
+  .footer-grid{grid-template-columns:1fr;gap:28px}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  #back-to-top{bottom:20px;right:20px;width:40px;height:40px}
+}
 </style>
 </head>
 <body>
-<nav id="nav"><div class="nav-inner"><a href="#hero" class="nav-logo"><span>宁波元电新能源有限公司</span><span class="nav-logo-sub">YUANDIAN NEW ENERGY</span></a><div class="nav-links"><a href="#intro" class="active">关于我们</a><a href="#products">产品服务</a><a href="#values">核心优势</a><a href="#contact">联系我们</a></div><div class="nav-right"><a href="#contact" class="nav-cta-btn">获取方案</a></div></div></nav>
-<section id="hero"><div class="hero-inner"><p class="hero-eyebrow">宁波元电新能源有限公司</p><h1 class="hero-title">绿色能源</h1><h2 class="hero-subtitle">驱动未来</h2><p class="hero-tagline">专注光伏、储能、充电桩全链路解决方案<br/>为清洁能源时代构建可靠基础设施</p><div class="hero-actions"><a href="#products" class="hero-link">探索产品 &#8594;</a><a href="#contact" class="hero-link secondary">联系我们 &#8594;</a></div></div></section>
-<section id="intro"><div class="intro-grid"><div class="reveal"><div class="intro-label">About Us</div><h2 class="intro-heading">为可持续未来<br/>构建清洁能源基础设施</h2><p class="intro-body">宁波元电新能源有限公司成立于 2022 年，总部位于浙江宁波。我们是一家专注于光伏组件、储能设备、充电桩及充电站研发制造与销售的高新技术企业，致力于为工商企业及个人用户提供高效、可靠、经济的清洁能源一站式解决方案。</p><div class="intro-stats"><div><span class="intro-stat-num stat-num" data-target="500">0</span><div class="intro-stat-label">成功项目</div></div><div><span class="intro-stat-num">2022</span><div class="intro-stat-label">公司成立</div></div><div><span class="intro-stat-num stat-num" data-target="30">0</span><div class="intro-stat-label">覆盖城市</div></div><div><span class="intro-stat-num stat-num" data-target="50">0</span><div class="intro-stat-label">MW 年产能</div></div></div></div><div class="intro-visual reveal reveal-delay-1"><div class="intro-visual-inner"><svg class="intro-visual-svg" viewBox="0 0 320 240" fill="none"><circle cx="160" cy="120" r="80" fill="#f0b429" opacity="0.08"/><circle cx="160" cy="120" r="50" fill="#f0b429" opacity="0.12"/><circle cx="160" cy="120" r="25" fill="#f0b429" opacity="0.2"/><rect x="80" y="60" width="30" height="18" rx="2" fill="#f0b429" opacity="0.8"/><rect x="115" y="60" width="30" height="18" rx="2" fill="#f0b429" opacity="0.7"/><rect x="150" y="60" width="30" height="18" rx="2" fill="#f0b429" opacity="0.8"/><rect x="185" y="60" width="30" height="18" rx="2" fill="#f0b429" opacity="0.65"/><rect x="80" y="82" width="30" height="18" rx="2" fill="#f0b429" opacity="0.65"/><rect x="115" y="82" width="30" height="18" rx="2" fill="#f0b429" opacity="0.85"/><rect x="150" y="82" width="30" height="18" rx="2" fill="#f0b429" opacity="0.9"/><rect x="185" y="82" width="30" height="18" rx="2" fill="#f0b429" opacity="0.7"/><rect x="80" y="104" width="30" height="18" rx="2" fill="#f0b429" opacity="0.6"/><rect x="115" y="104" width="30" height="18" rx="2" fill="#f0b429" opacity="0.75"/><rect x="150" y="104" width="30" height="18" rx="2" fill="#f0b429" opacity="0.7"/><rect x="185" y="104" width="30" height="18" rx="2" fill="#f0b429" opacity="0.8"/><line x1="70" y1="130" x2="250" y2="130" stroke="#d2d2d7" stroke-width="1" opacity="0.6"/><line x1="160" y1="30" x2="160" y2="220" stroke="#d2d2d7" stroke-width="1" opacity="0.6"/><path d="M168 80 L155 105 L162 105 L150 132 L172 100 L165 100 Z" fill="#f0b429"/><text x="160" y="200" text-anchor="middle" font-size="11" fill="#86868b" letter-spacing="4" font-family="Inter,sans-serif">NINGBO &#183; ZHEJIANG &#183; CHINA</text></svg><div class="intro-visual-label">清洁能源 &#183; 绿色未来</div></div></div></div></section>
-<section id="products"><div style="max-width:1200px;margin:0 auto;padding:0 22px;"><div class="reveal"><h2 class="section-title">全系列产品</h2><p class="section-desc">覆盖光伏发电、储能调峰、充电补能完整能源链路</p></div><div class="products-grid">
-<div class="product-card reveal reveal-delay-1"><div class="product-card-img solar"><svg viewBox="0 0 80 80" fill="none"><rect x="5" y="20" width="20" height="12" rx="1" fill="#f0b429" opacity="0.9"/><rect x="30" y="20" width="20" height="12" rx="1" fill="#f0b429" opacity="0.75"/><rect x="55" y="20" width="20" height="12" rx="1" fill="#f0b429" opacity="0.85"/><rect x="5" y="36" width="20" height="12" rx="1" fill="#f0b429" opacity="0.7"/><rect x="30" y="36" width="20" height="12" rx="1" fill="#f0b429" opacity="0.9"/><rect x="55" y="36" width="20" height="12" rx="1" fill="#f0b429" opacity="0.8"/><rect x="5" y="52" width="20" height="12" rx="1" fill="#f0b429" opacity="0.85"/><rect x="30" y="52" width="20" height="12" rx="1" fill="#f0b429" opacity="0.7"/><rect x="55" y="52" width="20" height="12" rx="1" fill="#f0b429" opacity="0.9"/><path d="M43 8 L30 30 L37 30 L24 56 L50 26 L42 26 Z" fill="#e67e00" opacity="0.85"/></svg></div><div class="product-card-body"><div class="product-card-tag">Photovoltaic</div><h3 class="product-card-title">高效光伏组件</h3><p class="product-card-desc">采用 TOPCon/HJT 先进电池技术，转换效率高达 23% 以上。适用于工商业屋顶与地面电站，25 年线性功率质保。</p><a href="#contact" class="product-card-link">了解更多 &#8594;</a></div></div>
-<div class="product-card reveal reveal-delay-2"><div class="product-card-img charging"><svg viewBox="0 0 80 80" fill="none"><rect x="18" y="5" width="44" height="70" rx="7" fill="#dbeafe" stroke="#0071e3" stroke-width="2"/><rect x="26" y="14" width="28" height="14" rx="3" fill="#0071e3" opacity="0.15"/><rect x="26" y="14" width="16" height="14" rx="3" fill="#0071e3"/><path d="M40 36 L31 52 L37 52 L27 70 L50 47 L43 47 Z" fill="#0071e3"/><circle cx="40" cy="38" r="4" fill="#fff"/></svg></div><div class="product-card-body"><div class="product-card-tag">Charging Pile</div><h3 class="product-card-title">智能充电桩</h3><p class="product-card-desc">覆盖交流 7kW 至直流 360kW 全功率段，支持国标 GB/T 协议，兼容主流电动汽车品牌，APP 智能管理。</p><a href="#contact" class="product-card-link">了解更多 &#8594;</a></div></div>
-<div class="product-card reveal reveal-delay-1"><div class="product-card-img station"><svg viewBox="0 0 80 80" fill="none"><rect x="5" y="28" width="28" height="47" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><rect x="47" y="28" width="28" height="47" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><path d="M19 28 L19 16 Q40 4 61 16 L61 28" stroke="#16a34a" stroke-width="2" fill="none"/><rect x="11" y="40" width="16" height="6" rx="2" fill="#16a34a" opacity="0.6"/><rect x="53" y="40" width="16" height="6" rx="2" fill="#16a34a" opacity="0.6"/><path d="M40 34 L31 48 L37 48 L27 64 L51 38 L44 38 Z" fill="#16a34a"/><circle cx="19" cy="38" r="3" fill="#fff"/></svg></div><div class="product-card-body"><div class="product-card-tag">Charging Station</div><h3 class="product-card-title">一体化充电站</h3><p class="product-card-desc">光储充一体化整体方案，规划、设计、建设、运营全流程覆盖，实现绿色低碳充电，有效降低用电成本。</p><a href="#contact" class="product-card-link">了解更多 &#8594;</a></div></div>
-<div class="product-card reveal reveal-delay-2"><div class="product-card-img storage"><svg viewBox="0 0 80 80" fill="none"><rect x="8" y="20" width="64" height="55" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><rect x="16" y="30" width="18" height="35" rx="3" fill="#7c3aed" opacity="0.2"/><rect x="31" y="30" width="18" height="35" rx="3" fill="#7c3aed" opacity="0.3"/><rect x="46" y="30" width="18" height="35" rx="3" fill="#7c3aed" opacity="0.4"/><rect x="16" y="30" width="18" height="20" rx="3" fill="#7c3aed" opacity="0.8"/><rect x="31" y="30" width="18" height="14" rx="3" fill="#7c3aed" opacity="0.8"/><path d="M68 28 L68 18 Q80 18 80 28 L80 34 Q80 38 76 38 L72 38 Q68 38 68 34 Z" stroke="#7c3aed" stroke-width="2" fill="none"/><line x1="68" y1="22" x2="80" y2="22" stroke="#7c3aed" stroke-width="2"/></svg></div><div class="product-card-body"><div class="product-card-tag">Energy Storage</div><h3 class="product-card-title">工商业储能系统</h3><p class="product-card-desc">磷酸铁锂储能，容量从 50kWh 到兆瓦级按需定制，支持峰谷套利、需量管理、应急备电，BMS 全时守护。</p><a href="#contact" class="product-card-link">了解更多 &#8594;</a></div></div>
-</div></div></section>
-<section id="values"><div style="max-width:1000px;margin:0 auto;padding:0 22px;"><div class="reveal"><h2 class="section-title">为什么选择我们</h2><p class="section-desc">以技术驱动，以品质立身</p></div><div class="values-grid">
-<div class="value-card reveal reveal-delay-1"><svg class="value-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#e0f2fe" stroke="#0071e3" stroke-width="2"/><path d="M24 14 L28 22 L36 22 L30 28 L32 36 L24 31 L16 36 L18 28 L12 22 L20 22 Z" fill="#0071e3"/></svg><div class="value-title">技术领先</div><div class="value-desc">拥有 50 余项核心专利，持续研发投入，产品性能参数优于行业平均水平，转换效率与循环寿命均达国际认证标准。</div></div>
-<div class="value-card reveal reveal-delay-2"><svg class="value-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/><path d="M14 24 L20 30 L34 16" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="value-title">品质认证</div><div class="value-desc">通过 ISO9001 质量管理体系认证，产品获得 CE、TÜV 等国际认证，出厂前 100% 全检，确保零缺陷交付。</div></div>
-<div class="value-card reveal reveal-delay-3"><svg class="value-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><path d="M24 12 L27 20 L36 20 L29 26 L31 34 L24 29 L17 34 L19 26 L12 20 L21 20 Z" fill="#d97706"/></svg><div class="value-title">一站式服务</div><div class="value-desc">从方案设计、产品供应到工程安装、运维管理，提供全流程一站式服务，让客户省心省力，专注核心业务。</div></div>
-</div></div></section>
-<section id="feature-banner"><div style="max-width:980px;margin:0 auto;padding:0 22px;" class="reveal"><h2 class="feature-banner-title">从方案到落地<br/>一路为你护航</h2><p class="feature-banner-desc">专业团队全程跟进，快速响应，灵活定制，<br/>让清洁能源落地更简单。</p><div class="feature-banner-actions"><a href="#contact" class="btn-apple btn-apple-white">立即咨询</a><a href="#products" class="btn-apple" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4)">查看产品</a></div></div></section>
-<section id="contact"><div class="contact-inner"><div class="reveal"><h2 class="cta-title">开启绿色能源之旅</h2><p class="cta-desc">无论是工商业项目还是个人需求，<br/>我们的专业顾问随时为您定制清洁能源方案。</p><div class="cta-actions"><a href="tel:15968956796" class="btn-apple btn-apple-primary">&#128222; 159-6895-6796</a><a href="mailto:15968956796@139.com" class="btn-apple btn-apple-outline">&#9993; 发送邮件</a></div></div><div class="contact-card reveal"><h3 class="contact-card-title">联系我们</h3><div class="contact-items"><div class="contact-item"><div class="contact-item-label">地址</div><div class="contact-item-value">浙江省宁波市海曙区望春工业园区春华路885号</div></div><div class="contact-item"><div class="contact-item-label">电话</div><div class="contact-item-value"><a href="tel:15968956796">159-6895-6796</a></div></div><div class="contact-item"><div class="contact-item-label">邮箱</div><div class="contact-item-value"><a href="mailto:15968956796@139.com">15968956796@139.com</a></div></div><div class="contact-item"><div class="contact-item-label">工作时间</div><div class="contact-item-value">周一至周六 08:30 &#8212; 18:00</div></div></div></div></div></section>
-<footer><div class="footer-inner"><div class="footer-grid"><div><div class="footer-brand-name">宁波元电新能源有限公司</div><div class="footer-brand-sub">YUANDIAN NEW ENERGY</div><div class="footer-brand-desc">专注光伏组件、储能设备、充电桩及充电站研发制造，为清洁能源时代构建可靠基础设施。</div></div><div><div class="footer-col-title">产品</div><ul class="footer-links"><li><a href="#products">光伏组件</a></li><li><a href="#products">智能充电桩</a></li><li><a href="#products">一体化充电站</a></li><li><a href="#products">储能系统</a></li></ul></div><div><div class="footer-col-title">公司</div><ul class="footer-links"><li><a href="#intro">关于我们</a></li><li><a href="#values">核心优势</a></li><li><a href="#contact">联系我们</a></li></ul></div><div><div class="footer-col-title">联系方式</div><ul class="footer-links"><li><a href="tel:15968956796">159-6895-6796</a></li><li><a href="mailto:15968956796@139.com">15968956796@139.com</a></li><li><a href="#">浙江省宁波市海曙区</a></li></ul></div></div></div><div class="footer-divider"></div><div class="footer-bottom"><div>© 2024 宁波元电新能源有限公司 版权所有</div><div>Powered by Yuandian New Energy</div></div></div></footer><button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">&#8593;</button><script>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span>瀹佹尝鍏冪數鏂拌兘婧愭湁闄愬叕鍙?/span>
+      <span class="nav-logo-sub">YUANDIAN NEW ENERGY</span>
+    </a>
+    <div class="nav-links">
+      <a href="#intro" class="active">鍏充簬鎴戜滑</a>
+      <a href="#products">浜у搧鏈嶅姟</a>
+      <a href="#values">鏍稿績浼樺娍</a>
+      <a href="#contact">鑱旂郴鎴戜滑</a>
+    </div>
+    <div class="nav-right">
+      <a href="#contact" class="nav-cta-btn">鑾峰彇鏂规</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="鑿滃崟">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#intro" onclick="closeMobile()">鍏充簬鎴戜滑</a>
+  <a href="#products" onclick="closeMobile()">浜у搧鏈嶅姟</a>
+  <a href="#values" onclick="closeMobile()">鏍稿績浼樺娍</a>
+  <a href="#contact" onclick="closeMobile()">鑱旂郴鎴戜滑</a>
+</div>
+
+<section id="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">瀹佹尝鍏冪數鏂拌兘婧愭湁闄愬叕鍙?/p>
+    <h1 class="hero-title">缁胯壊鑳芥簮</h1>
+    <h2 class="hero-subtitle">椹卞姩鏈潵</h2>
+    <p class="hero-tagline">涓撴敞鍏変紡銆佸偍鑳姐€佸厖鐢垫々鍏ㄩ摼璺В鍐虫柟妗?br/>涓烘竻娲佽兘婧愭椂浠ｆ瀯寤哄彲闈犲熀纭€璁炬柦</p>
+    <div class="hero-actions">
+      <a href="#products" class="hero-link">鎺㈢储浜у搧 <span>&#8594;</span></a>
+      <span class="hero-divider"></span>
+      <a href="#contact" class="hero-link secondary">鑱旂郴鎴戜滑 <span>&#8594;</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="intro">
+  <div class="intro-grid">
+    <div class="reveal">
+      <div class="intro-label">About Us</div>
+      <h2 class="intro-heading">涓哄彲鎸佺画鏈潵<br/>鏋勫缓娓呮磥鑳芥簮鍩虹璁炬柦</h2>
+      <p class="intro-body">瀹佹尝鍏冪數鏂拌兘婧愭湁闄愬叕鍙告垚绔嬩簬 2022 骞达紝鎬婚儴浣嶄簬娴欐睙瀹佹尝銆傛垜浠槸涓€瀹朵笓娉ㄤ簬鍏変紡缁勪欢銆佸偍鑳借澶囥€佸厖鐢垫々鍙婂厖鐢电珯鐮斿彂鍒堕€犱笌閿€鍞殑楂樻柊鎶€鏈紒涓氾紝鑷村姏浜庝负宸ュ晢浼佷笟鍙婁釜浜虹敤鎴锋彁渚涢珮鏁堛€佸彲闈犮€佺粡娴庣殑娓呮磥鑳芥簮涓€绔欏紡瑙ｅ喅鏂规銆?/p>
+      <div class="intro-stats">
+        <div><span class="intro-stat-num stat-num" data-target="500">0</span><div class="intro-stat-label">鎴愬姛椤圭洰</div></div>
+        <div><span class="intro-stat-num">2022</span><div class="intro-stat-label">鍏徃鎴愮珛</div></div>
+        <div><span class="intro-stat-num stat-num" data-target="30">0</span><div class="intro-stat-label">瑕嗙洊鍩庡競</div></div>
+        <div><span class="intro-stat-num stat-num" data-target="50">0</span><div class="intro-stat-label">MW 骞翠骇鑳?/div></div>
+      </div>
+    </div>
+    <div class="intro-visual reveal reveal-delay-1">
+      <div class="intro-visual-inner">
+        <svg class="intro-visual-svg" viewBox="0 0 320 240" fill="none">
+          <circle cx="160" cy="120" r="80" fill="#f0b429" opacity="0.08"/>
+          <circle cx="160" cy="120" r="50" fill="#f0b429" opacity="0.12"/>
+          <circle cx="160" cy="120" r="25" fill="#f0b429" opacity="0.2"/>
+          <rect x="80" y="60" width="30" height="18" rx="2" fill="#f0b429" opacity="0.8"/>
+          <rect x="115" y="60" width="30" height="18" rx="2" fill="#f0b429" opacity="0.7"/>
+          <rect x="150" y="60" width="30" height="18" rx="2" fill="#f0b429" opacity="0.8"/>
+          <rect x="185" y="60" width="30" height="18" rx="2" fill="#f0b429" opacity="0.65"/>
+          <rect x="80" y="82" width="30" height="18" rx="2" fill="#f0b429" opacity="0.65"/>
+          <rect x="115" y="82" width="30" height="18" rx="2" fill="#f0b429" opacity="0.85"/>
+          <rect x="150" y="82" width="30" height="18" rx="2" fill="#f0b429" opacity="0.9"/>
+          <rect x="185" y="82" width="30" height="18" rx="2" fill="#f0b429" opacity="0.7"/>
+          <rect x="80" y="104" width="30" height="18" rx="2" fill="#f0b429" opacity="0.6"/>
+          <rect x="115" y="104" width="30" height="18" rx="2" fill="#f0b429" opacity="0.75"/>
+          <rect x="150" y="104" width="30" height="18" rx="2" fill="#f0b429" opacity="0.7"/>
+          <rect x="185" y="104" width="30" height="18" rx="2" fill="#f0b429" opacity="0.8"/>
+          <line x1="70" y1="130" x2="250" y2="130" stroke="#d2d2d7" stroke-width="1" opacity="0.6"/>
+          <line x1="160" y1="30" x2="160" y2="220" stroke="#d2d2d7" stroke-width="1" opacity="0.6"/>
+          <path d="M168 80 L155 105 L162 105 L150 132 L172 100 L165 100 Z" fill="#f0b429"/>
+          <text x="160" y="200" text-anchor="middle" font-size="11" fill="#86868b" letter-spacing="4" font-family="Inter, sans-serif">NINGBO 路 ZHEJIANG 路 CHINA</text>
+        </svg>
+        <div class="intro-visual-label">娓呮磥鑳芥簮 路 缁胯壊鏈潵</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div style="max-width:1200px;margin:0 auto;padding:0 22px;">
+    <div class="reveal">
+      <h2 class="section-title">鍏ㄧ郴鍒椾骇鍝?/h2>
+      <p class="section-desc">瑕嗙洊鍏変紡鍙戠數銆佸偍鑳借皟宄般€佸厖鐢佃ˉ鑳藉畬鏁磋兘婧愰摼璺?/p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-card-img solar">
+          <svg viewBox="0 0 80 80" fill="none">
+            <rect x="5" y="20" width="20" height="12" rx="1" fill="#f0b429" opacity="0.9"/>
+            <rect x="30" y="20" width="20" height="12" rx="1" fill="#f0b429" opacity="0.75"/>
+            <rect x="55" y="20" width="20" height="12" rx="1" fill="#f0b429" opacity="0.85"/>
+            <rect x="5" y="36" width="20" height="12" rx="1" fill="#f0b429" opacity="0.7"/>
+            <rect x="30" y="36" width="20" height="12" rx="1" fill="#f0b429" opacity="0.9"/>
+            <rect x="55" y="36" width="20" height="12" rx="1" fill="#f0b429" opacity="0.8"/>
+            <rect x="5" y="52" width="20" height="12" rx="1" fill="#f0b429" opacity="0.85"/>
+            <rect x="30" y="52" width="20" height="12" rx="1" fill="#f0b429" opacity="0.7"/>
+            <rect x="55" y="52" width="20" height="12" rx="1" fill="#f0b429" opacity="0.9"/>
+            <path d="M43 8 L30 30 L37 30 L24 56 L50 26 L42 26 Z" fill="#e67e00" opacity="0.85"/>
+          </svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Photovoltaic</div>
+          <h3 class="product-card-title">楂樻晥鍏変紡缁勪欢</h3>
+          <p class="product-card-desc">閲囩敤 TOPCon/HJT 鍏堣繘鐢垫睜鎶€鏈紝杞崲鏁堢巼楂樿揪 23% 浠ヤ笂銆傞€傜敤浜庡伐鍟嗕笟灞嬮《涓庡湴闈㈢數绔欙紝25 骞寸嚎鎬у姛鐜囪川淇濄€?/p>
+          <a href="#contact" class="product-card-link">浜嗚В鏇村 &#8594;</a>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-card-img charging">
+          <svg viewBox="0 0 80 80" fill="none">
+            <rect x="18" y="5" width="44" height="70" rx="7" fill="#dbeafe" stroke="#0071e3" stroke-width="2"/>
+            <rect x="26" y="14" width="28" height="14" rx="3" fill="#0071e3" opacity="0.15"/>
+            <rect x="26" y="14" width="16" height="14" rx="3" fill="#0071e3"/>
+            <path d="M40 36 L31 52 L37 52 L27 70 L50 47 L43 47 Z" fill="#0071e3"/>
+            <circle cx="40" cy="38" r="4" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Charging Pile</div>
+          <h3 class="product-card-title">鏅鸿兘鍏呯數妗?/h3>
+          <p class="product-card-desc">瑕嗙洊浜ゆ祦 7kW 鑷崇洿娴?360kW 鍏ㄥ姛鐜囨锛屾敮鎸佸浗鏍?GB/T 鍗忚锛屽吋瀹逛富娴佺數鍔ㄦ苯杞﹀搧鐗岋紝APP 鏅鸿兘绠＄悊銆?/p>
+          <a href="#contact" class="product-card-link">浜嗚В鏇村 &#8594;</a>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-1">
+        <div class="product-card-img station">
+          <svg viewBox="0 0 80 80" fill="none">
+            <rect x="5" y="28" width="28" height="47" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+            <rect x="47" y="28" width="28" height="47" rx="4" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+            <path d="M19 28 L19 16 Q40 4 61 16 L61 28" stroke="#16a34a" stroke-width="2" fill="none"/>
+            <rect x="11" y="40" width="16" height="6" rx="2" fill="#16a34a" opacity="0.6"/>
+            <rect x="53" y="40" width="16" height="6" rx="2" fill="#16a34a" opacity="0.6"/>
+            <path d="M40 34 L31 48 L37 48 L27 64 L51 38 L44 38 Z" fill="#16a34a"/>
+            <circle cx="19" cy="38" r="3" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Charging Station</div>
+          <h3 class="product-card-title">涓€浣撳寲鍏呯數绔?/h3>
+          <p class="product-card-desc">鍏夊偍鍏呬竴浣撳寲鏁翠綋鏂规锛岃鍒掋€佽璁°€佸缓璁俱€佽繍钀ュ叏娴佺▼瑕嗙洊锛屽疄鐜扮豢鑹蹭綆纰冲厖鐢碉紝鏈夋晥闄嶄綆鐢ㄧ數鎴愭湰銆?/p>
+          <a href="#contact" class="product-card-link">浜嗚В鏇村 &#8594;</a>
+        </div>
+      </div>
+      <div class="product-card reveal reveal-delay-2">
+        <div class="product-card-img storage">
+          <svg viewBox="0 0 80 80" fill="none">
+            <rect x="8" y="20" width="64" height="55" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+            <rect x="16" y="30" width="18" height="35" rx="3" fill="#7c3aed" opacity="0.2"/>
+            <rect x="31" y="30" width="18" height="35" rx="3" fill="#7c3aed" opacity="0.3"/>
+            <rect x="46" y="30" width="18" height="35" rx="3" fill="#7c3aed" opacity="0.4"/>
+            <rect x="16" y="30" width="18" height="20" rx="3" fill="#7c3aed" opacity="0.8"/>
+            <rect x="31" y="30" width="18" height="14" rx="3" fill="#7c3aed" opacity="0.8"/>
+            <path d="M68 28 L68 18 Q80 18 80 28 L80 34 Q80 38 76 38 L72 38 Q68 38 68 34 Z" stroke="#7c3aed" stroke-width="2" fill="none"/>
+            <line x1="68" y1="22" x2="80" y2="22" stroke="#7c3aed" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-tag">Energy Storage</div>
+          <h3 class="product-card-title">宸ュ晢涓氬偍鑳界郴缁?/h3>
+          <p class="product-card-desc">纾烽吀閾侀攤鍌ㄨ兘锛屽閲忎粠 50kWh 鍒板厗鐡︾骇鎸夐渶瀹氬埗锛屾敮鎸佸嘲璋峰鍒┿€侀渶閲忕鐞嗐€佸簲鎬ュ鐢碉紝BMS 鍏ㄦ椂瀹堟姢銆?/p>
+          <a href="#contact" class="product-card-link">浜嗚В鏇村 &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="values">
+  <div style="max-width:1000px;margin:0 auto;padding:0 22px;">
+    <div class="reveal">
+      <h2 class="section-title">涓轰粈涔堥€夋嫨鎴戜滑</h2>
+      <p class="section-desc">浠ユ妧鏈┍鍔紝浠ュ搧璐ㄧ珛韬?/p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal reveal-delay-1">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#e0f2fe" stroke="#0071e3" stroke-width="2"/><path d="M24 14 L28 22 L36 22 L30 28 L32 36 L24 31 L16 36 L18 28 L12 22 L20 22 Z" fill="#0071e3"/></svg>
+        <div class="value-title">鎶€鏈鍏?/div>
+        <div class="value-desc">鎷ユ湁 50 浣欓」鏍稿績涓撳埄锛屾寔缁爺鍙戞姇鍏ワ紝浜у搧鎬ц兘鍙傛暟浼樹簬琛屼笟骞冲潎姘村钩锛岃浆鎹㈡晥鐜囦笌寰幆瀵垮懡鍧囪揪鍥介檯璁よ瘉鏍囧噯銆?/div>
+      </div>
+      <div class="value-card reveal reveal-delay-2">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/><path d="M14 24 L20 30 L34 16" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="value-title">鍝佽川璁よ瘉</div>
+        <div class="value-desc">閫氳繃 ISO9001 璐ㄩ噺绠＄悊浣撶郴璁よ瘉锛屼骇鍝佽幏寰?CE銆乀脺V 绛夊浗闄呰璇侊紝鍑哄巶鍓?100% 鍏ㄦ锛岀‘淇濋浂缂洪櫡浜や粯銆?/div>
+      </div>
+      <div class="value-card reveal reveal-delay-3">
+        <svg class="value-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><path d="M24 12 L27 20 L36 20 L29 26 L31 34 L24 29 L17 34 L19 26 L12 20 L21 20 Z" fill="#d97706"/></svg>
+        <div class="value-title">涓€绔欏紡鏈嶅姟</div>
+        <div class="value-desc">浠庢柟妗堣璁°€佷骇鍝佷緵搴斿埌宸ョ▼瀹夎銆佽繍缁寸鐞嗭紝鎻愪緵鍏ㄦ祦绋嬩竴绔欏紡鏈嶅姟锛岃瀹㈡埛鐪佸績鐪佸姏锛屼笓娉ㄦ牳蹇冧笟鍔°€?/div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="feature-banner">
+  <div style="max-width:980px;margin:0 auto;padding:0 22px;" class="reveal">
+    <h2 class="feature-banner-title">浠庢柟妗堝埌钀藉湴<br/>涓€璺负浣犳姢鑸?/h2>
+    <p class="feature-banner-desc">涓撲笟鍥㈤槦鍏ㄧ▼璺熻繘锛屽揩閫熷搷搴旓紝鐏垫椿瀹氬埗锛?br/>璁╂竻娲佽兘婧愯惤鍦版洿绠€鍗曘€?/p>
+    <div class="feature-banner-actions">
+      <a href="#contact" class="btn-apple btn-apple-white">绔嬪嵆鍜ㄨ</a>
+      <a href="#products" class="btn-apple" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4)">鏌ョ湅浜у搧</a>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="contact-inner">
+    <div class="reveal">
+      <h2 class="cta-title">寮€鍚豢鑹茶兘婧愪箣鏃?/h2>
+      <p class="cta-desc">鏃犺鏄伐鍟嗕笟椤圭洰杩樻槸涓汉闇€姹傦紝<br/>鎴戜滑鐨勪笓涓氶【闂殢鏃朵负鎮ㄥ畾鍒舵竻娲佽兘婧愭柟妗堛€?/p>
+      <div class="cta-actions">
+        <a href="tel:15968956796" class="btn-apple btn-apple-primary">&#128222; 159-6895-6796</a>
+        <a href="mailto:15968956796@139.com" class="btn-apple btn-apple-outline">&#9993; 鍙戦€侀偖浠?/a>
+      </div>
+    </div>
+    <div class="contact-card reveal">
+      <h3 class="contact-card-title">鑱旂郴鎴戜滑</h3>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="contact-item-label">鍦板潃</div>
+          <div class="contact-item-value">娴欐睙鐪佸畞娉㈠競娴锋洐鍖烘湜鏄ュ伐涓氬洯鍖烘槬鍗庤矾885鍙?/div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">鐢佃瘽</div>
+          <div class="contact-item-value"><a href="tel:15968956796">159-6895-6796</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">閭</div>
+          <div class="contact-item-value"><a href="mailto:15968956796@139.com">15968956796@139.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-label">宸ヤ綔鏃堕棿</div>
+          <div class="contact-item-value">鍛ㄤ竴鑷冲懆鍏?08:30 &#8212; 18:00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">瀹佹尝鍏冪數鏂拌兘婧愭湁闄愬叕鍙?/div>
+        <div class="footer-brand-sub">YUANDIAN NEW ENERGY</div>
+        <div class="footer-brand-desc">涓撴敞鍏変紡缁勪欢銆佸偍鑳借澶囥€佸厖鐢垫々鍙婂厖鐢电珯鐮斿彂鍒堕€狅紝涓烘竻娲佽兘婧愭椂浠ｆ瀯寤哄彲闈犲熀纭€璁炬柦銆?/div>
+      </div>
+      <div>
+        <div class="footer-col-title">浜у搧</div>
+        <ul class="footer-links">
+          <li><a href="#products">鍏変紡缁勪欢</a></li>
+          <li><a href="#products">鏅鸿兘鍏呯數妗?/a></li>
+          <li><a href="#products">涓€浣撳寲鍏呯數绔?/a></li>
+          <li><a href="#products">鍌ㄨ兘绯荤粺</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">鍏徃</div>
+        <ul class="footer-links">
+          <li><a href="#intro">鍏充簬鎴戜滑</a></li>
+          <li><a href="#values">鏍稿績浼樺娍</a></li>
+          <li><a href="#contact">鑱旂郴鎴戜滑</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">鑱旂郴鏂瑰紡</div>
+        <ul class="footer-links">
+          <li><a href="tel:15968956796">159-6895-6796</a></li>
+          <li><a href="mailto:15968956796@139.com">15968956796@139.com</a></li>
+          <li><a href="#">娴欐睙鐪佸畞娉㈠競娴锋洐鍖?/a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div>&#169; 2024 瀹佹尝鍏冪數鏂拌兘婧愭湁闄愬叕鍙?鐗堟潈鎵€鏈?/div>
+      <div>Powered by Yuandian New Energy</div>
+    </div>
+  </div>
+</footer>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="杩斿洖椤堕儴">&#8593;</button>
+<script>
 // Scroll reveal
-const revealObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}});},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*0.1+'s';revealObserver.observe(el);});
+var revealObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4)*0.1+'s';revealObserver.observe(el);});
 // Active nav
-const sections=document.querySelectorAll('section[id]');
-const navLinks=document.querySelectorAll('.nav-links a');
-const navObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(link=>{link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id);});}});},{threshold:0.4});
-sections.forEach(s=>navObserver.observe(s));
+var sections=document.querySelectorAll('section[id]');
+var navLinks=document.querySelectorAll('.nav-links a');
+var navObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){navLinks.forEach(function(link){link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id);});}});},{threshold:0.4});
+sections.forEach(function(s){navObserver.observe(s);});
 // Stat counter
-function animateCount(el,target){let start=null;const duration=1800;function step(ts){if(!start)start=ts;const p=Math.min((ts-start)/duration,1);const ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
-const statsObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){document.querySelectorAll('.stat-num').forEach(el=>{const target=parseInt(el.dataset.target);if(target)animateCount(el,target);});statsObserver.unobserve(entry.target);}});,{threshold:0.5});
-const introStats=document.querySelector('.intro-stats');if(introStats)statsObserver.observe(introStats);
+function animateCount(el,target){var start=null;var duration=1800;function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/duration,1);var ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+var statsObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){document.querySelectorAll('.stat-num').forEach(function(el){var target=parseInt(el.dataset.target);if(target)animateCount(el,target);});statsObserver.unobserve(entry.target);}});},{threshold:0.5});
+var introStats=document.querySelector('.intro-stats');if(introStats)statsObserver.observe(introStats);
 // Back to top
-const backToTop=document.getElementById('back-to-top');
-window.addEventListener('scroll',()=>{backToTop.classList.toggle('visible',window.scrollY>400);},{passive:true});
-</script></body></html>
+var backToTop=document.getElementById('back-to-top');
+window.addEventListener('scroll',function(){backToTop.classList.toggle('visible',window.scrollY>400);},{passive:true});
+// Hamburger menu
+var hamburger=document.getElementById('hamburger');
+var mobileMenu=document.getElementById('mobileMenu');
+if(hamburger&&mobileMenu){hamburger.addEventListener('click',function(){hamburger.classList.toggle('active');mobileMenu.classList.toggle('open');document.body.style.overflow=mobileMenu.classList.contains('open')?'hidden':'';});}
+function closeMobile(){if(hamburger)hamburger.classList.remove('active');if(mobileMenu)mobileMenu.classList.remove('open');document.body.style.overflow='';}
+</script>
+</body>
+</html>
