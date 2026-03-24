@@ -55,7 +55,7 @@ a{color:#3b82f6;text-decoration:none}
 #particles{position:absolute;inset:0}
 .particle{position:absolute;width:2px;height:2px;background:#3b82f6;border-radius:50%;opacity:0;animation:pf linear infinite}
 @keyframes pf{0%{opacity:0;transform:translateY(100vh)}8%{opacity:0.9}92%{opacity:0.9}100%{opacity:0;transform:translateY(-10vh)}}
-.hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:120px 24px 80px}
+.hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:120px 24px 80px;text-align:center}
 .hero-wordmark-wrap{position:relative;display:inline-block;margin-bottom:32px}
 .hero-wordmark{font-size:clamp(80px,15vw,180px);font-weight:800;letter-spacing:-0.04em;line-height:1;background:linear-gradient(135deg,#ffffff 0%,#c7d2fe 40%,#818cf8 70%,#3b82f6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;opacity:0;transform:translateY(60px) scale(1.15);filter:blur(12px);transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1),transform 0.9s cubic-bezier(0.16,1,0.3,1),filter 0.9s cubic-bezier(0.16,1,0.3,1)}
 .hero-wordmark.animate{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
@@ -65,7 +65,7 @@ a{color:#3b82f6;text-decoration:none}
 .hero-sub.animate{opacity:1;transform:translateY(0)}
 .hero-desc{font-size:clamp(14px,1.8vw,18px);color:rgba(245,245,247,0.35);margin-bottom:56px;opacity:0;transform:translateY(20px);transition:opacity 0.7s ease 1s,transform 0.7s ease 1s}
 .hero-desc.animate{opacity:1;transform:translateY(0)}
-.hero-actions{display:flex;align-items:center;gap:24px;opacity:0;transform:translateY(20px);transition:opacity 0.7s ease 1.3s,transform 0.7s ease 1.3s}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:24px;opacity:0;transform:translateY(20px);transition:opacity 0.7s ease 1.3s,transform 0.7s ease 1.3s}
 .hero-actions.animate{opacity:1;transform:translateY(0)}
 .hero-scroll-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fu 1s ease-out 1.8s forwards;z-index:2}
 @keyframes fu{to{opacity:1}}
