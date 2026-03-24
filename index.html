@@ -408,19 +408,19 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,0.04);padding:72
 <!-- ===== 新闻动态 ===== -->
 <section id="news"><div class="news-wrap"><div class="reveal"><span class="section-label">News &amp; Updates</span><h2 class="section-title">新闻动态</h2><p class="section-desc">行业资讯 · 政策解读 · 公司动态</p></div>
 <div class="news-grid">
-<div class="news-card reveal reveal-d1">
+<div class="news-card reveal reveal-d1" onclick="openNewsModal(0)" style="cursor:pointer">
   <span class="news-tag tag-policy">政策</span>
   <div class="news-title">两会定调"充电桩三年倍增"：2026-2027年充电基建迎爆发期</div>
   <div class="news-desc">全国两会明确充电桩"三年倍增"计划，2026-2027年被视为充电基建爆发关键期。全国充电设施总量已突破2069.8万个，同比增长49.6%，补能网络从"有没有"全面转向"好不好、快不快"新阶段。</div>
   <div class="news-footer"><span class="news-date">2026-03-21</span><span style="color:#3b82f6;font-size:12px;font-weight:600">阅读全文 →</span></div>
 </div>
-<div class="news-card reveal reveal-d2">
+<div class="news-card reveal reveal-d2" onclick="openNewsModal(1)" style="cursor:pointer">
   <span class="news-tag tag-industry">行业</span>
   <div class="news-title">新型储能产业迎关键政策支撑，工商业储能装机规模持续攀升</div>
   <div class="news-desc">人民网报道，国家发改委、能源局联合出台新型储能专项支持政策，明确工商业侧储能峰谷价差收益保障机制，业内预计2026年新增装机规模将突破100GWh，工商业储能项目回收周期缩短至5-6年。</div>
   <div class="news-footer"><span class="news-date">2026-03-20</span><span style="color:#3b82f6;font-size:12px;font-weight:600">阅读全文 →</span></div>
 </div>
-<div class="news-card reveal reveal-d3">
+<div class="news-card reveal reveal-d3" onclick="openNewsModal(2)" style="cursor:pointer">
   <span class="news-tag tag-tech">标准</span>
   <div class="news-title">充电桩六项新国标3月1日起正式实施，大功率直流充电迎统一规范</div>
   <div class="news-desc">电动汽车充电桩六项新国家标准于2026年3月1日正式实施，涵盖大功率直流充电接口、通信协议及安全要求，新标准将推动国内充电设施互联互通，60~480kW直流快充桩将成主流配置。</div>
@@ -508,7 +508,86 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,0.04);padding:72
   <div id="caseModalContent"></div>
 </div></div>
 
+<!-- ===== 新闻弹窗 ===== -->
+<div class="modal-overlay" id="newsModal" onclick="closeModal('newsModal',event)">
+<div class="modal-box"><button class="modal-close" onclick="closeModalDirect('newsModal')">✕</button>
+  <div id="newsModalContent"></div>
+</div></div>
+
+
 <script>
+// ===== 新闻数据 =====
+var newsData=[
+{
+  tag:"政策", tagClass:"tag-policy", date:"2026-03-21",
+  title:"两会定调"充电桩三年倍增"：2026-2027年充电基建迎爆发期",
+  summary:"全国两会明确充电桩"三年倍增"计划，2026-2027年被视为充电基建爆发关键期。",
+  content:`<p>2026年全国两会期间，充电桩基础设施建设被明确写入政府工作报告，提出"三年倍增"战略目标，计划到2028年全国充电设施总量突破5000万个。</p>
+<p>根据中国充电联盟2026年3月最新数据，全国充电设施总量已突破<strong>2069.8万个</strong>，同比增长49.6%，新能源汽车保有量持续攀升，补能网络正式从"有没有"转向"好不好、快不快、便不便"新阶段。</p>
+<p>政策层面，国家发改委、能源局联合印发《充电基础设施高质量发展行动方案（2026-2028）》，重点支持：</p>
+<ul style="margin:12px 0 12px 20px;color:rgba(245,245,247,0.65);line-height:2">
+  <li>高速公路服务区大功率快充覆盖率提升至100%</li>
+  <li>城市核心区充电桩密度翻倍，停车场配建比例不低于20%</li>
+  <li>工商业园区、产业园鼓励建设自用+公用一体化充电站</li>
+  <li>光储充一体化项目享受优先并网和额外补贴</li>
+</ul>
+<p style="color:rgba(245,245,247,0.45);font-size:13px">来源：中国充电联盟 / 国家发改委，2026年3月</p>`
+},
+{
+  tag:"行业", tagClass:"tag-industry", date:"2026-03-20",
+  title:"新型储能产业迎关键政策支撑，工商业储能装机规模持续攀升",
+  summary:"国家出台新型储能专项支持政策，工商业侧储能峰谷价差收益保障机制明确，项目回收周期缩短至5-6年。",
+  content:`<p>人民网报道，国家发改委、能源局联合出台新型储能专项支持政策，重点明确工商业侧储能峰谷价差收益保障机制，这是储能行业近年来最重磅的利好政策之一。</p>
+<p>核心政策要点：</p>
+<ul style="margin:12px 0 12px 20px;color:rgba(245,245,247,0.65);line-height:2">
+  <li>工商业用户配储比例建议值提升至10%~20%，部分省份强制配储</li>
+  <li>峰谷电价价差保障不低于0.7元/kWh，浙江、广东等省份超过1元</li>
+  <li>储能项目可享受增值税即征即退30%政策</li>
+  <li>业内预计2026年新增装机规模将突破<strong>100GWh</strong></li>
+</ul>
+<p>以宁波本地电价为例，峰谷价差约0.85元/kWh，工商业储能项目<strong>回收周期已缩短至5-6年</strong>，全生命周期收益率超过15%，经济性大幅提升。</p>
+<p>元电新能源已承接多个工商业储能项目，欢迎联系我们获取专属方案。</p>
+<p style="color:rgba(245,245,247,0.45);font-size:13px">来源：人民网财经，2026年3月20日</p>`
+},
+{
+  tag:"标准", tagClass:"tag-tech", date:"2026-03-01",
+  title:"充电桩六项新国标3月1日起正式实施，大功率直流充电迎统一规范",
+  summary:"六项电动汽车充电桩国家标准正式实施，60~480kW直流快充桩将成主流配置。",
+  content:`<p>2026年3月1日，由长园能源等企业参编的六项电动汽车充电桩国家标准正式实施，标志着中国充电行业进入标准化新时代。</p>
+<p>新国标核心变化：</p>
+<ul style="margin:12px 0 12px 20px;color:rgba(245,245,247,0.65);line-height:2">
+  <li><strong>接口统一</strong>：大功率直流充电接口标准全国统一，彻底解决"一桩多枪不兼容"问题</li>
+  <li><strong>功率提升</strong>：主流直流充电桩功率范围从60kW提升至<strong>480kW</strong>，超充时代加速到来</li>
+  <li><strong>通信协议</strong>：充电通信协议统一，支持V2G双向充放电</li>
+  <li><strong>安全要求</strong>：绝缘检测、过温保护等安全指标全面升级</li>
+</ul>
+<p>宁波元电新能源全系直流充电桩产品均已完成新国标适配认证，功率覆盖60~480kW，支持即插即充与预约充电，欢迎咨询选型方案。</p>
+<p style="color:rgba(245,245,247,0.45);font-size:13px">来源：国家标准化管理委员会，2026年3月1日</p>`
+}
+];
+
+function openNewsModal(idx){
+  var d=newsData[idx];
+  var tagColors={
+    'tag-policy':'background:rgba(59,130,246,0.12);color:#60a5fa;border:1px solid rgba(59,130,246,0.2)',
+    'tag-industry':'background:rgba(245,158,11,0.12);color:#fbbf24;border:1px solid rgba(245,158,11,0.2)',
+    'tag-tech':'background:rgba(139,92,246,0.12);color:#c4b5fd;border:1px solid rgba(139,92,246,0.2)'
+  };
+  document.getElementById('newsModalContent').innerHTML=
+    '<div style="padding:8px 0 24px">'+
+      '<span style="display:inline-block;padding:3px 10px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:1.5px;margin-bottom:16px;'+tagColors[d.tagClass]+'">'+d.tag+'</span>'+
+      '<h2 style="font-size:clamp(18px,2.5vw,24px);font-weight:800;color:#f5f5f7;line-height:1.4;margin-bottom:10px">'+d.title+'</h2>'+
+      '<div style="font-size:12px;color:rgba(245,245,247,0.3);margin-bottom:24px">'+d.date+'</div>'+
+      '<div style="font-size:15px;color:rgba(245,245,247,0.72);line-height:1.9">'+d.content+'</div>'+
+      '<div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06);display:flex;gap:12px;flex-wrap:wrap">'+
+        '<a href="#inquiry" onclick="closeModalDirect(\'newsModal\')" class="btn btn-primary" style="font-size:14px;padding:12px 24px">免费获取方案</a>'+
+        '<a href="tel:15968956796" class="btn btn-outline" style="font-size:14px;padding:12px 24px">电话咨询</a>'+
+      '</div>'+
+    '</div>';
+  document.getElementById('newsModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
 // ===== 产品数据 =====
 var products=[
 {tag:"Photovoltaic",title:"高效光伏组件",bg:"solar-bg",desc:"采用 TOPCon / HJT 先进电池技术，宇宙级光子捕获效率。适用于工商业屋顶、地面电站、分布式发电等多种场景，支持 BIPV 建筑一体化方案定制。",params:[{label:"电池技术",val:"TOPCon / HJT",unit:""},{label:"转换效率",val:"≥23%",unit:""},{label:"功率范围",val:"430~710",unit:"Wp"},{label:"质保期限",val:"25年线性功率",unit:""},{label:"认证",val:"CE / TUV / IEC",unit:""},{label:"温度系数",val:"-0.29%/°C",unit:""}],svgClass:"solar-bg"},
