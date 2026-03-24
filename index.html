@@ -520,8 +520,8 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,0.04);padding:72
 var newsData=[
 {
   tag:"政策", tagClass:"tag-policy", date:"2026-03-21",
-  title:"两会定调"充电桩三年倍增"：2026-2027年充电基建迎爆发期",
-  summary:"全国两会明确充电桩"三年倍增"计划，2026-2027年被视为充电基建爆发关键期。",
+  title:'两会定调“充电桩三年倍增”：2026-2027年充电基建迎爆发期',
+  summary:'全国两会明确充电桩“三年倍增”计划，2026-2027年被视为充电基建爆发关键期。',
   content:`<p>2026年全国两会期间，充电桩基础设施建设被明确写入政府工作报告，提出"三年倍增"战略目标，计划到2028年全国充电设施总量突破5000万个。</p>
 <p>根据中国充电联盟2026年3月最新数据，全国充电设施总量已突破<strong>2069.8万个</strong>，同比增长49.6%，新能源汽车保有量持续攀升，补能网络正式从"有没有"转向"好不好、快不快、便不便"新阶段。</p>
 <p>政策层面，国家发改委、能源局联合印发《充电基础设施高质量发展行动方案（2026-2028）》，重点支持：</p>
@@ -535,8 +535,8 @@ var newsData=[
 },
 {
   tag:"行业", tagClass:"tag-industry", date:"2026-03-20",
-  title:"新型储能产业迎关键政策支撑，工商业储能装机规模持续攀升",
-  summary:"国家出台新型储能专项支持政策，工商业侧储能峰谷价差收益保障机制明确，项目回收周期缩短至5-6年。",
+  title:'新型储能产业迎关键政策支撑，工商业储能装机规模持续攀升',
+  summary:'国家出台新型储能专项支持政策，工商业侧储能峰谷价差收益保障机制明确，项目回收周期缩短至5-6年。',
   content:`<p>人民网报道，国家发改委、能源局联合出台新型储能专项支持政策，重点明确工商业侧储能峰谷价差收益保障机制，这是储能行业近年来最重磅的利好政策之一。</p>
 <p>核心政策要点：</p>
 <ul style="margin:12px 0 12px 20px;color:rgba(245,245,247,0.65);line-height:2">
@@ -551,8 +551,8 @@ var newsData=[
 },
 {
   tag:"标准", tagClass:"tag-tech", date:"2026-03-01",
-  title:"充电桩六项新国标3月1日起正式实施，大功率直流充电迎统一规范",
-  summary:"六项电动汽车充电桩国家标准正式实施，60~480kW直流快充桩将成主流配置。",
+  title:'充电桩六项新国标3月1日起正式实施，大功率直流充电迎统一规范',
+  summary:'六项电动汽车充电桩国家标准正式实施，60~480kW直流快充桩将成主流配置。',
   content:`<p>2026年3月1日，由长园能源等企业参编的六项电动汽车充电桩国家标准正式实施，标志着中国充电行业进入标准化新时代。</p>
 <p>新国标核心变化：</p>
 <ul style="margin:12px 0 12px 20px;color:rgba(245,245,247,0.65);line-height:2">
@@ -617,7 +617,7 @@ function openCaseModal(idx){
 }
 function closeModal(id,e){if(e.target.id===id){closeModalDirect(id);}}
 function closeModalDirect(id){var el=document.getElementById(id);if(el)el.classList.remove('open');document.body.style.overflow='';}
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModalDirect('prodModal');closeModalDirect('caseModal');}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModalDirect('prodModal');closeModalDirect('caseModal');closeModalDirect('newsModal');}});
 
 // ===== 询价表单提交（Formspree） =====
 function submitInquiry(e){
