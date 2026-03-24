@@ -18,7 +18,7 @@ a{color:#3b82f6;text-decoration:none}
 #nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:56px;background:rgba(10,10,12,0.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06)}
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:100%;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-size:14px;font-weight:700;color:#f5f5f7;letter-spacing:0.5px}
-.nav-logo small{display:block;font-size:8px;font-weight:500;color:rgba(245,245,247,0.4);letter-spacing:3px;text-transform:uppercase;margin-top:1px}
+.nav-logo-sub{display:block;font-size:8px;font-weight:500;color:rgba(245,245,247,0.4);letter-spacing:3px;text-transform:uppercase;margin-top:1px}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{font-size:12px;color:rgba(245,245,247,0.5);transition:color 0.3s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:#3b82f6;transition:width 0.3s}
@@ -50,6 +50,7 @@ a{color:#3b82f6;text-decoration:none}
 .hero-subtitle{font-size:clamp(28px,5vw,56px);font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:rgba(245,245,247,0.9);margin-bottom:24px;opacity:0;animation:fadeUp 1s ease-out 0.55s forwards}
 .hero-tagline{font-size:clamp(15px,2vw,19px);font-weight:400;color:rgba(245,245,247,0.45);max-width:520px;margin:0 auto 48px;line-height:1.7;opacity:0;animation:fadeUp 1s ease-out 0.7s forwards}
 .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp 1s ease-out 0.85s forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:100px;font-size:15px;font-weight:600;border:none;cursor:pointer;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);position:relative;overflow:hidden;font-family:inherit}
 .btn-primary{background:linear-gradient(135deg,#3b82f6,#6366f1);color:#fff;box-shadow:0 4px 24px rgba(59,130,246,0.35)}
 .btn-primary::before{content:'';position:absolute;inset:-2px;background:linear-gradient(135deg,#3b82f6,#8b5cf6,#ec4899,#3b82f6);background-size:300% 300%;border-radius:100px;z-index:-1;opacity:0;transition:opacity 0.3s;animation:gradientShift 3s ease infinite}
@@ -77,16 +78,25 @@ a{color:#3b82f6;text-decoration:none}
 #products{background:#0a0a0c;overflow:hidden;padding:120px 0}
 .products-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 .products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.prod-card-reveal{opacity:0;transform:translateY(100px) scale(0.88);transition:opacity 1s cubic-bezier(0.16,1,0.3,1),transform 1s cubic-bezier(0.16,1,0.3,1)}
+.prod-card-reveal.visible{opacity:1;transform:translateY(0) scale(1)}
+.prod-card-reveal.delay-a{transition-delay:0s}
+.prod-card-reveal.delay-b{transition-delay:0.18s}
+.prod-card-reveal.delay-c{transition-delay:0.36s}
+.prod-card-reveal.delay-d{transition-delay:0.54s}
 .product-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:24px;overflow:hidden;transition:all 0.5s cubic-bezier(0.175,0.885,0.32,1.275);cursor:pointer;position:relative}
 .product-card:hover{transform:translateY(-14px) scale(1.03);border-color:rgba(59,130,246,0.4);box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 80px rgba(59,130,246,0.12)}
+/* Shine sweep */
 .product-card::after{content:'';position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent);transform:skewX(-15deg);z-index:2;pointer-events:none;transition:left 0s}
 .product-card:hover::after{left:160%;transition:left 0.9s cubic-bezier(0.16,1,0.3,1)}
+/* Bottom shimmer line */
 .product-card-shimmer{position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ec4899);transition:width 0.6s cubic-bezier(0.16,1,0.3,1)}
 .product-card:hover .product-card-shimmer{width:100%}
 .product-card-img{height:240px;display:flex;align-items:center;justify-content:center;transition:transform 0.6s cubic-bezier(0.34,1.56,0.64,1);position:relative;overflow:hidden}
 .product-card:hover .product-card-img{transform:scale(1.15)}
 .product-card-img svg{width:80px;height:80px;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1)}
 .product-card:hover .product-card-img svg{transform:scale(1.25) rotate(-5deg)}
+/* Icon float animation */
 @keyframes iconFloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(4deg)}}
 .icon-float-a{animation:iconFloat 3.5s ease-in-out infinite}
 .icon-float-b{animation:iconFloat 3.5s ease-in-out infinite 1.2s}
@@ -150,27 +160,29 @@ footer{background:#06060a;border-top:1px solid rgba(255,255,255,0.05);padding:64
 .reveal-delay-1{transition-delay:0.1s}
 .reveal-delay-2{transition-delay:0.2s}
 .reveal-delay-3{transition-delay:0.3s}
-@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-/* Product card reveal - each card animates separately as it enters viewport */
-.prod-card-reveal{opacity:0;transform:translateY(100px) scale(0.88);transition:opacity 1s cubic-bezier(0.16,1,0.3,1),transform 1s cubic-bezier(0.16,1,0.3,1)}
-.prod-card-reveal.visible{opacity:1;transform:translateY(0) scale(1)}
-.prod-card-reveal.delay-a{transition-delay:0s}
-.prod-card-reveal.delay-b{transition-delay:0.18s}
-.prod-card-reveal.delay-c{transition-delay:0.36s}
-.prod-card-reveal.delay-d{transition-delay:0.54s}
-/* Product icon pulse on hover */
-@keyframes iconPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
-.product-card:hover .product-card-img svg{animation:iconPulse 0.6s ease-in-out}
 @media(max-width:980px){.intro-grid{grid-template-columns:1fr;gap:56px}.footer-grid{grid-template-columns:1fr 1fr;gap:32px}}
 @media(max-width:768px){
 .hamburger{display:flex}.nav-links,.nav-cta-wrap{display:none!important}
-.hero-inner{padding:100px 20px 60px}.hero-title{font-size:clamp(38px,10vw,72px)}.hero-subtitle{font-size:clamp(22px,6vw,36px)}.hero-tagline{font-size:15px;margin-bottom:36px}.hero-actions{flex-direction:column;align-items:center;gap:12px}.btn{font-size:14px;padding:14px 28px}.section{padding:80px 0}.intro-grid{gap:40px}.intro-heading{font-size:clamp(24px,5vw,34px)}.intro-body{font-size:14px}.intro-stats{grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}.intro-stat{padding:16px}.intro-stat-num{font-size:clamp(28px,7vw,40px)}.products-grid,.values-grid,.contact-grid{grid-template-columns:1fr}.product-card-img{height:180px}.product-card-body{padding:20px 24px 28px}.value-card{padding:28px 24px}.feature-banner{padding:100px 0}.feature-banner-title{font-size:clamp(30px,8vw,52px)}.cta-title{font-size:clamp(30px,8vw,52px)}.contact-card{padding:32px 24px}.contact-card-title{font-size:18px;margin-bottom:24px}.contact-grid{grid-template-columns:1fr;gap:20px}.footer-grid{grid-template-columns:1fr;gap:28px}.footer-bottom{flex-direction:column;gap:12px;text-align:center}#back-to-top{bottom:20px;right:20px;width:40px;height:40px}
+.hero-inner{padding:100px 20px 60px}.hero-title{font-size:clamp(38px,10vw,72px)}
+.hero-subtitle{font-size:clamp(22px,6vw,36px)}.hero-tagline{font-size:15px;margin-bottom:36px}
+.hero-actions{flex-direction:column;align-items:center;gap:12px}.btn{font-size:14px;padding:14px 28px}
+.section{padding:80px 0}.intro-grid{gap:40px}.intro-heading{font-size:clamp(24px,5vw,34px)}
+.intro-body{font-size:14px}.intro-stats{grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.intro-stat{padding:16px}.intro-stat-num{font-size:clamp(28px,7vw,40px)}
+.products-grid,.values-grid,.contact-grid{grid-template-columns:1fr}
+.product-card-img{height:180px}.product-card-body{padding:20px 24px 28px}
+.value-card{padding:28px 24px}.feature-banner{padding:100px 0}
+.feature-banner-title{font-size:clamp(30px,8vw,52px)}.cta-title{font-size:clamp(30px,8vw,52px)}
+.contact-card{padding:32px 24px}.contact-card-title{font-size:18px;margin-bottom:24px}
+.contact-grid{grid-template-columns:1fr;gap:20px}.footer-grid{grid-template-columns:1fr;gap:28px}
+.footer-bottom{flex-direction:column;gap:12px;text-align:center}#back-to-top{bottom:20px;right:20px;width:40px;height:40px}
 }
+
 </body>
 </html>
 <body>
 <div id="progress"></div>
-<nav id="nav"><div class="nav-inner"><a href="#hero" class="nav-logo">宁波元电新能源有限公司<small>YUANDIAN NEW ENERGY</small></a><div class="nav-links"><a href="#intro" class="active">关于我们</a><a href="#products">产品服务</a><a href="#values">核心优势</a><a href="#contact">联系我们</a></div><div class="nav-cta-wrap"><a href="#contact" class="nav-cta">获取方案</a></div><button class="hamburger" id="hamburger" aria-label="menu"><span></span><span></span><span></span></button></div></nav>
+<nav id="nav"><div class="nav-inner"><a href="#hero" class="nav-logo">宁波元电新能源有限公司<span class="nav-logo-sub">YUANDIAN NEW ENERGY</span></a><div class="nav-links"><a href="#intro" class="active">关于我们</a><a href="#products">产品服务</a><a href="#values">核心优势</a><a href="#contact">联系我们</a></div><div class="nav-cta-wrap"><a href="#contact" class="nav-cta">获取方案</a></div><button class="hamburger" id="hamburger" aria-label="menu"><span></span><span></span><span></span></button></div></nav>
 <div class="mobile-menu" id="mobileMenu"><a href="#intro" onclick="closeMobile()">关于我们</a><a href="#products" onclick="closeMobile()">产品服务</a><a href="#values" onclick="closeMobile()">核心优势</a><a href="#contact" onclick="closeMobile()">联系我们</a></div>
 <section id="hero"><div class="hero-bg"><div class="hero-grid"></div><div id="particles"></div></div><div class="hero-inner"><p class="hero-eyebrow">宁波元电新能源有限公司</p><h1 class="hero-title">绿色能源</h1><h2 class="hero-subtitle">驱动未来</h2><p class="hero-tagline">专注光伏、储能、充电桩全链路解决方案<br/>为清洁能源时代构建可靠基础设施</p><div class="hero-actions"><a href="#products" class="btn btn-primary">探索产品</a><a href="#contact" class="btn btn-outline">联系我们</a></div></div></section>
 <section id="intro"><div class="intro-grid"><div class="reveal"><div class="intro-label">About Us</div><h2 class="intro-heading">为可持续未来<br/>构建清洁能源基础设施</h2><p class="intro-body">宁波元电新能源有限公司成立于2022年，总部位于浙江宁波。我们是一家专注于光伏组件、储能设备、充电桩及充电站研发制造与销售的高新技术企业，致力于为工商企业及个人用户提供高效、可靠、经济的清洁能源一站式解决方案。</p><div class="intro-stats"><div class="intro-stat"><div class="intro-stat-num stat-num" data-target="500">0</div><div class="intro-stat-label">成功项目</div></div><div class="intro-stat"><div class="intro-stat-num">2022</div><div class="intro-stat-label">公司成立</div></div><div class="intro-stat"><div class="intro-stat-num stat-num" data-target="30">0</div><div class="intro-stat-label">覆盖城市</div></div><div class="intro-stat"><div class="intro-stat-num stat-num" data-target="50">0</div><div class="intro-stat-label">MW 年产能</div></div></div></div><div class="intro-visual reveal reveal-delay-1"><svg viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="160" cy="120" r="90" fill="#3b82f6" opacity="0.05"/><circle cx="160" cy="120" r="60" fill="#3b82f6" opacity="0.08"/><circle cx="160" cy="120" r="30" fill="#3b82f6" opacity="0.12"/><rect x="70" y="60" width="28" height="16" rx="2" fill="#f0b429" opacity="0.9"/><rect x="103" y="60" width="28" height="16" rx="2" fill="#f0b429" opacity="0.75"/><rect x="136" y="60" width="28" height="16" rx="2" fill="#f0b429" opacity="0.85"/><rect x="169" y="60" width="28" height="16" rx="2" fill="#f0b429" opacity="0.7"/><rect x="202" y="60" width="28" height="16" rx="2" fill="#f0b429" opacity="0.8"/><rect x="70" y="82" width="28" height="16" rx="2" fill="#f0b429" opacity="0.65"/><rect x="103" y="82" width="28" height="16" rx="2" fill="#f0b429" opacity="0.9"/><rect x="136" y="82" width="28" height="16" rx="2" fill="#f0b429" opacity="0.85"/><rect x="169" y="82" width="28" height="16" rx="2" fill="#f0b429" opacity="0.7"/><rect x="202" y="82" width="28" height="16" rx="2" fill="#f0b429" opacity="0.9"/><rect x="70" y="104" width="28" height="16" rx="2" fill="#f0b429" opacity="0.8"/><rect x="103" y="104" width="28" height="16" rx="2" fill="#f0b429" opacity="0.7"/><rect x="136" y="104" width="28" height="16" rx="2" fill="#f0b429" opacity="0.85"/><rect x="169" y="104" width="28" height="16" rx="2" fill="#f0b429" opacity="0.75"/><rect x="202" y="104" width="28" height="16" rx="2" fill="#f0b429" opacity="0.9"/><line x1="60" y1="128" x2="260" y2="128" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><line x1="160" y1="30" x2="160" y2="210" stroke="rgba(255,255,255,0.06)" stroke-width="1"/><path d="M168 76 L154 104 L161 104 L148 134 L174 98 L166 98 Z" fill="#f0b429"/></svg></div></div></section>
@@ -187,28 +199,21 @@ footer{background:#06060a;border-top:1px solid rgba(255,255,255,0.05);padding:64
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="top">UP</button>
 <script>
 (function(){
-  // Particles
   var pc=document.getElementById('particles');
   if(pc){for(var i=0;i<30;i++){var p=document.createElement('div');p.className='particle';p.style.left=Math.random()*100+'%';p.style.width=(Math.random()*2+1)+'px';p.style.height=p.style.width;p.style.animationDuration=(Math.random()*20+15)+'s';p.style.animationDelay=(Math.random()*15)+'s';pc.appendChild(p);}}
-  // Scroll reveal
   var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal,.prod-card-reveal').forEach(function(el){obs.observe(el);});
-  // Active nav
   var secs=document.querySelectorAll('section[id]');
   var navLnks=document.querySelectorAll('.nav-links a');
   var navObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){navLnks.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')=='#'+e.target.id);});}});},{threshold:0.4});
   secs.forEach(function(s){navObs.observe(s);});
-  // Counter
   function animate(el,target){var start=null,dur=2000;function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var ease=1-Math.pow(1-p,4);el.textContent=Math.floor(ease*target);if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
   var statObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){document.querySelectorAll('.stat-num').forEach(function(el){var t=parseInt(el.dataset.target);if(t)animate(el,t);});statObs.unobserve(e.target);}});},{threshold:0.5});
   var sEl=document.querySelector('.intro-stats');if(sEl)statObs.observe(sEl);
-  // Progress bar
   var prog=document.getElementById('progress');
   window.addEventListener('scroll',function(){var pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;if(prog)prog.style.width=pct+'%';},{passive:true});
-  // Back to top
   var btt=document.getElementById('back-to-top');
   window.addEventListener('scroll',function(){btt.classList.toggle('visible',window.scrollY>500);},{passive:true});
-  // Hamburger
   var ham=document.getElementById('hamburger');
   var menu=document.getElementById('mobileMenu');
   if(ham&&menu){ham.addEventListener('click',function(){ham.classList.toggle('active');menu.classList.toggle('open');document.body.style.overflow=menu.classList.contains('open')?'hidden':'';});}
