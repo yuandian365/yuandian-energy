@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宁波元电新能源有限公司 | 绿色能源·智慧未来</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== 导航栏 ===== -->
+  <header id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-icon">⚡</div>
+        <div class="logo-text">
+          <span class="logo-main">元电新能源</span>
+          <span class="logo-sub">YUANDIAN NEW ENERGY</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#home" class="nav-link active" onclick="showPage('home', this)">首页</a>
+        <a href="#about" class="nav-link" onclick="showPage('about', this)">关于我们</a>
+        <a href="#products" class="nav-link" onclick="showPage('products', this)">产品服务</a>
+        <a href="#contact" class="nav-link" onclick="showPage('contact', this)">联系我们</a>
+      </nav>
+      <button class="contact-btn" onclick="showPage('contact', null)">免费咨询</button>
+      <div class="hamburger" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="showPage('home', null); toggleMobileMenu()">首页</a>
+      <a href="#about" onclick="showPage('about', null); toggleMobileMenu()">关于我们</a>
+      <a href="#products" onclick="showPage('products', null); toggleMobileMenu()">产品服务</a>
+      <a href="#contact" onclick="showPage('contact', null); toggleMobileMenu()">联系我们</a>
+    </div>
+  </header>
+
+  <!-- ===== 首页 ===== -->
+  <div id="page-home" class="page active">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">🌿 绿色能源领导者</div>
+        <h1 class="hero-title">
+          驱动绿色未来<br>
+          <span class="gradient-text">智慧能源解决方案</span>
+        </h1>
+        <p class="hero-desc">
+          宁波元电新能源有限公司，专注于光伏组件、充电站、充电桩及储能设备的研发与推广。<br>
+          以技术创新为核心，为客户提供一站式清洁能源解决方案。
+        </p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('products', null)">探索产品</button>
+          <button class="btn-outline" onclick="showPage('contact', null)">联系我们</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-target="500">0</span><span class="stat-unit">+</span>
+            <span class="stat-label">合作客户</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="1200">0</span><span class="stat-unit">+</span>
+            <span class="stat-label">项目案例</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="10">0</span><span class="stat-unit">年+</span>
+            <span class="stat-label">行业经验</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="98">0</span><span class="stat-unit">%</span>
+            <span class="stat-label">客户满意度</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="energy-card">
+          <div class="energy-ring outer"></div>
+          <div class="energy-ring middle"></div>
+          <div class="energy-ring inner"></div>
+          <div class="energy-core">
+            <div class="core-icon">☀️</div>
+            <div class="core-text">清洁能源</div>
+          </div>
+          <div class="orbit-dot dot1">🔋</div>
+          <div class="orbit-dot dot2">⚡</div>
+          <div class="orbit-dot dot3">🌱</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 产品亮点 -->
+    <section class="section features-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">核心业务</div>
+          <h2 class="section-title">全方位新能源解决方案</h2>
+          <p class="section-desc">整合光伏发电、充电基础设施与储能技术，构建完整的绿色能源生态系统</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card" onclick="showPage('products', null)">
+            <div class="feature-icon pv">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="4" y="8" width="40" height="32" rx="3" fill="#FFF3E0" stroke="#FF9800" stroke-width="2"/>
+                <line x1="4" y1="18" x2="44" y2="18" stroke="#FF9800" stroke-width="1.5"/>
+                <line x1="4" y1="28" x2="44" y2="28" stroke="#FF9800" stroke-width="1.5"/>
+                <line x1="17" y1="8" x2="17" y2="40" stroke="#FF9800" stroke-width="1.5"/>
+                <line x1="31" y1="8" x2="31" y2="40" stroke="#FF9800" stroke-width="1.5"/>
+                <circle cx="24" cy="4" r="3" fill="#FFC107"/>
+                <line x1="24" y1="1" x2="24" y2="-1" stroke="#FFC107" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3>光伏组件</h3>
+            <p>高效单晶/多晶硅太阳能电池板，转换效率高达23%，适用于屋顶、地面等多种安装场景</p>
+            <div class="feature-tags">
+              <span>高效率</span><span>长寿命</span><span>强稳定</span>
+            </div>
+            <div class="feature-arrow">→</div>
+          </div>
+
+          <div class="feature-card" onclick="showPage('products', null)">
+            <div class="feature-icon cs">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="8" y="6" width="32" height="36" rx="4" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+                <rect x="14" y="12" width="20" height="12" rx="2" fill="#BBDEFB" stroke="#2196F3" stroke-width="1.5"/>
+                <circle cx="24" cy="32" r="4" fill="#2196F3"/>
+                <line x1="24" y1="36" x2="24" y2="42" stroke="#2196F3" stroke-width="2"/>
+                <rect x="20" y="40" width="8" height="3" rx="1.5" fill="#2196F3"/>
+              </svg>
+            </div>
+            <h3>充电站</h3>
+            <p>大功率直流快充站，支持多车同时充电，智能调度管理，满足商业综合体及高速服务区需求</p>
+            <div class="feature-tags">
+              <span>快充</span><span>智能</span><span>大功率</span>
+            </div>
+            <div class="feature-arrow">→</div>
+          </div>
+
+          <div class="feature-card" onclick="showPage('products', null)">
+            <div class="feature-icon cp">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="10" y="4" width="28" height="40" rx="4" fill="#F3E5F5" stroke="#9C27B0" stroke-width="2"/>
+                <rect x="16" y="10" width="16" height="10" rx="2" fill="#CE93D8" stroke="#9C27B0" stroke-width="1.5"/>
+                <circle cx="24" cy="30" r="5" fill="#9C27B0"/>
+                <path d="M22 30 L24 26 L26 30" fill="white"/>
+                <line x1="16" y1="40" x2="20" y2="40" stroke="#9C27B0" stroke-width="2" stroke-linecap="round"/>
+                <line x1="28" y1="40" x2="32" y2="40" stroke="#9C27B0" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>充电桩</h3>
+            <p>家用及商用交流充电桩，支持手机APP远程监控，安全防护等级IP65，适配主流电动车型</p>
+            <div class="feature-tags">
+              <span>安全</span><span>便捷</span><span>智联</span>
+            </div>
+            <div class="feature-arrow">→</div>
+          </div>
+
+          <div class="feature-card" onclick="showPage('products', null)">
+            <div class="feature-icon es">
+              <svg viewBox="0 0 48 48" fill="none">
+                <rect x="6" y="10" width="36" height="28" rx="4" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+                <rect x="12" y="16" width="10" height="16" rx="2" fill="#A5D6A7" stroke="#4CAF50" stroke-width="1.5"/>
+                <rect x="26" y="16" width="10" height="16" rx="2" fill="#A5D6A7" stroke="#4CAF50" stroke-width="1.5"/>
+                <line x1="22" y1="24" x2="26" y2="24" stroke="#4CAF50" stroke-width="2"/>
+                <line x1="42" y1="20" x2="44" y2="20" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+                <line x1="42" y1="28" x2="44" y2="28" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+                <line x1="4" y1="20" x2="6" y2="20" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+                <line x1="4" y1="28" x2="6" y2="28" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>储能设备</h3>
+            <p>磷酸铁锂电池储能系统，循环寿命超6000次，支持光储充一体化，保障电力稳定供应</p>
+            <div class="feature-tags">
+              <span>高密度</span><span>长循环</span><span>一体化</span>
+            </div>
+            <div class="feature-arrow">→</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 为什么选择我们 -->
+    <section class="section why-section">
+      <div class="container">
+        <div class="why-content">
+          <div class="why-text">
+            <div class="section-tag">我们的优势</div>
+            <h2 class="section-title left">为什么选择<br><span class="gradient-text">元电新能源</span></h2>
+            <div class="advantage-list">
+              <div class="advantage-item">
+                <div class="adv-icon">🏆</div>
+                <div>
+                  <h4>行业领先技术</h4>
+                  <p>拥有20余项核心专利，持续研发投入，确保产品技术保持行业领先水平</p>
+                </div>
+              </div>
+              <div class="advantage-item">
+                <div class="adv-icon">🔧</div>
+                <div>
+                  <h4>全程服务保障</h4>
+                  <p>从方案设计、安装施工到运维管理，提供7×24小时全生命周期服务</p>
+                </div>
+              </div>
+              <div class="advantage-item">
+                <div class="adv-icon">🌐</div>
+                <div>
+                  <h4>广泛应用场景</h4>
+                  <p>成功落地工商业、住宅、公共交通等多元场景，积累丰富实施经验</p>
+                </div>
+              </div>
+              <div class="advantage-item">
+                <div class="adv-icon">✅</div>
+                <div>
+                  <h4>权威认证体系</h4>
+                  <p>产品通过TÜV、CE、CQC等国际权威认证，质量稳定可靠，全球适用</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="why-visual">
+            <div class="cert-cards">
+              <div class="cert-card c1">
+                <div class="cert-num">20+</div>
+                <div class="cert-label">核心专利</div>
+              </div>
+              <div class="cert-card c2">
+                <div class="cert-num">ISO</div>
+                <div class="cert-label">9001认证</div>
+              </div>
+              <div class="cert-card c3">
+                <div class="cert-num">TÜV</div>
+                <div class="cert-label">国际认证</div>
+              </div>
+              <div class="cert-card c4">
+                <div class="cert-num">AAA</div>
+                <div class="cert-label">信用评级</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 合作流程 -->
+    <section class="section process-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">服务流程</div>
+          <h2 class="section-title">简单四步，快速落地</h2>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-num">01</div>
+            <div class="step-icon">📋</div>
+            <h4>需求沟通</h4>
+            <p>免费上门勘察，深入了解您的能源需求与场地条件</p>
+          </div>
+          <div class="process-arrow">›</div>
+          <div class="process-step">
+            <div class="step-num">02</div>
+            <div class="step-icon">📐</div>
+            <h4>方案设计</h4>
+            <p>专业团队量身定制最优能源解决方案与报价</p>
+          </div>
+          <div class="process-arrow">›</div>
+          <div class="process-step">
+            <div class="step-num">03</div>
+            <div class="step-icon">⚙️</div>
+            <h4>安装施工</h4>
+            <p>持证工程师规范施工，严格把控质量与安全</p>
+          </div>
+          <div class="process-arrow">›</div>
+          <div class="process-step">
+            <div class="step-num">04</div>
+            <div class="step-icon">🛡️</div>
+            <h4>运维保障</h4>
+            <p>智能监控平台实时监测，定期巡检维护，保障稳定运行</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-glow"></div>
+          <h2>开启您的绿色能源之旅</h2>
+          <p>立即咨询，获取专业能源解决方案与报价</p>
+          <div class="cta-btns">
+            <button class="btn-primary large" onclick="showPage('contact', null)">立即咨询</button>
+            <button class="btn-ghost large" onclick="showPage('products', null)">了解产品</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== 关于我们 ===== -->
+  <div id="page-about" class="page">
+
+    <section class="page-hero about-hero">
+      <div class="page-hero-bg"></div>
+      <div class="page-hero-content">
+        <div class="breadcrumb">首页 / 关于我们</div>
+        <h1>关于元电新能源</h1>
+        <p>深耕新能源领域十余年，以创新驱动发展，以品质赢得信任</p>
+      </div>
+    </section>
+
+    <!-- 公司简介 -->
+    <section class="section">
+      <div class="container">
+        <div class="about-intro">
+          <div class="about-intro-img">
+            <div class="company-visual">
+              <div class="cv-main">
+                <div class="cv-icon">🏢</div>
+                <div class="cv-name">宁波元电新能源</div>
+                <div class="cv-year">成立于 2014</div>
+              </div>
+              <div class="cv-badge b1">光伏</div>
+              <div class="cv-badge b2">储能</div>
+              <div class="cv-badge b3">充电</div>
+              <div class="cv-badge b4">创新</div>
+            </div>
+          </div>
+          <div class="about-intro-text">
+            <div class="section-tag">公司简介</div>
+            <h2>专注新能源 &<br>智慧能源管理</h2>
+            <p>宁波元电新能源有限公司成立于2014年，总部位于宁波市，是一家专注于清洁能源产品研发、生产与销售的高新技术企业。</p>
+            <p>公司核心业务涵盖<strong>光伏组件</strong>、<strong>充电站建设</strong>、<strong>充电桩制造</strong>及<strong>储能系统集成</strong>四大领域，致力于为工商业、住宅社区及公共基础设施提供全面的绿色能源解决方案。</p>
+            <p>经过十余年的积累与发展，公司已在浙江、江苏、上海等地建立完善的销售服务网络，累计服务客户超500家，实施项目超1200个，装机总量突破500MW。</p>
+            <div class="intro-highlights">
+              <div class="ih-item"><span class="ih-num">500</span><span class="ih-unit">+</span><span class="ih-label">合作客户</span></div>
+              <div class="ih-item"><span class="ih-num">500</span><span class="ih-unit">MW</span><span class="ih-label">装机总量</span></div>
+              <div class="ih-item"><span class="ih-num">20</span><span class="ih-unit">+</span><span class="ih-label">核心专利</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使命愿景价值观 -->
+    <section class="section mvv-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">企业文化</div>
+          <h2 class="section-title">使命 · 愿景 · 价值观</h2>
+        </div>
+        <div class="mvv-grid">
+          <div class="mvv-card mission">
+            <div class="mvv-icon">🎯</div>
+            <h3>使命</h3>
+            <p>推动清洁能源普及，助力实现碳中和目标，为子孙后代守护绿色地球</p>
+          </div>
+          <div class="mvv-card vision">
+            <div class="mvv-icon">🔭</div>
+            <h3>愿景</h3>
+            <p>成为长三角地区最具影响力的新能源综合服务商，引领智慧能源管理新时代</p>
+          </div>
+          <div class="mvv-card values">
+            <div class="mvv-icon">💎</div>
+            <h3>价值观</h3>
+            <p>创新驱动 · 客户至上 · 绿色发展 · 诚信经营 · 共赢合作</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section class="section timeline-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">发展历程</div>
+          <h2 class="section-title">十年奋进，砥砺前行</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item left">
+            <div class="tl-content">
+              <div class="tl-year">2014</div>
+              <h4>公司成立</h4>
+              <p>宁波元电新能源有限公司正式注册成立，开始光伏组件代理销售业务</p>
+            </div>
+            <div class="tl-dot"></div>
+          </div>
+          <div class="timeline-item right">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2016</div>
+              <h4>自主研发启动</h4>
+              <p>建立研发中心，启动光伏组件自主研发，获得首批产品专利</p>
+            </div>
+          </div>
+          <div class="timeline-item left">
+            <div class="tl-content">
+              <div class="tl-year">2018</div>
+              <h4>充电业务拓展</h4>
+              <p>进入充电桩市场，推出首款商用交流充电桩产品，获得高新技术企业认证</p>
+            </div>
+            <div class="tl-dot"></div>
+          </div>
+          <div class="timeline-item right">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2020</div>
+              <h4>储能系统布局</h4>
+              <p>完成储能系统研发，实现光储充一体化解决方案，业务规模快速增长</p>
+            </div>
+          </div>
+          <div class="timeline-item left">
+            <div class="tl-content">
+              <div class="tl-year">2022</div>
+              <h4>规模化扩张</h4>
+              <p>在浙江、江苏设立分公司，完成A轮融资，装机量突破200MW</p>
+            </div>
+            <div class="tl-dot"></div>
+          </div>
+          <div class="timeline-item right">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-year">2024</div>
+              <h4>领航新征程</h4>
+              <p>累计装机量超500MW，荣获省级"绿色制造示范企业"称号，迈向全国布局</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 团队 -->
+    <section class="section team-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">核心团队</div>
+          <h2 class="section-title">专业团队，值得信赖</h2>
+        </div>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #1a6b3c, #2ecc71)">张</div>
+            <h4>张明远</h4>
+            <div class="team-title">创始人 & CEO</div>
+            <p>15年新能源行业经验，前某国家电网技术总监，推动公司战略方向</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #1a3a6b, #3498db)">李</div>
+            <h4>李思颖</h4>
+            <div class="team-title">技术总监 CTO</div>
+            <p>博士学历，拥有12项光伏技术专利，主导核心产品研发创新</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #6b1a3a, #e74c3c)">王</div>
+            <h4>王国栋</h4>
+            <div class="team-title">销售总监 CSO</div>
+            <p>深耕长三角能源市场10年，建立覆盖100+城市的销售服务网络</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" style="background: linear-gradient(135deg, #5a1a6b, #9b59b6)">陈</div>
+            <h4>陈晓华</h4>
+            <div class="team-title">工程总监</div>
+            <p>主导超1000个项目落地实施，精通电力系统设计与工程管理</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== 产品服务 ===== -->
+  <div id="page-products" class="page">
+
+    <section class="page-hero products-hero">
+      <div class="page-hero-bg"></div>
+      <div class="page-hero-content">
+        <div class="breadcrumb">首页 / 产品服务</div>
+        <h1>产品与服务</h1>
+        <p>四大核心产品线，构建完整绿色能源生态</p>
+      </div>
+    </section>
+
+    <!-- 产品导航 -->
+    <div class="product-nav-bar">
+      <div class="container">
+        <div class="product-nav">
+          <button class="pnav-btn active" onclick="filterProduct('all', this)">全部产品</button>
+          <button class="pnav-btn" onclick="filterProduct('pv', this)">光伏组件</button>
+          <button class="pnav-btn" onclick="filterProduct('cs', this)">充电站</button>
+          <button class="pnav-btn" onclick="filterProduct('cp', this)">充电桩</button>
+          <button class="pnav-btn" onclick="filterProduct('es', this)">储能设备</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 产品详情 -->
+    <section class="section">
+      <div class="container">
+
+        <!-- 光伏组件 -->
+        <div class="product-section" data-cat="pv">
+          <div class="product-detail">
+            <div class="product-detail-visual pv-bg">
+              <div class="product-graphic">
+                <div class="pv-panel">
+                  <div class="pv-grid">
+                    <div class="pv-cell" style="animation-delay:0s"></div>
+                    <div class="pv-cell" style="animation-delay:0.1s"></div>
+                    <div class="pv-cell" style="animation-delay:0.2s"></div>
+                    <div class="pv-cell" style="animation-delay:0.3s"></div>
+                    <div class="pv-cell" style="animation-delay:0.4s"></div>
+                    <div class="pv-cell" style="animation-delay:0.5s"></div>
+                    <div class="pv-cell" style="animation-delay:0.6s"></div>
+                    <div class="pv-cell" style="animation-delay:0.7s"></div>
+                    <div class="pv-cell" style="animation-delay:0.8s"></div>
+                  </div>
+                  <div class="sun-rays">☀️</div>
+                </div>
+              </div>
+            </div>
+            <div class="product-detail-info">
+              <div class="product-cat-badge pv-badge">光伏组件</div>
+              <h2>高效太阳能光伏组件</h2>
+              <p>元电新能源光伏组件采用先进的TOPCon电池技术，通过精密的封装工艺，在各种天气和温度条件下保持卓越的发电性能，为客户带来最大化的收益回报。</p>
+              <div class="product-specs">
+                <div class="spec-row">
+                  <div class="spec-item">
+                    <span class="spec-label">最高效率</span>
+                    <span class="spec-value">23.5%</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">峰值功率</span>
+                    <span class="spec-value">545W</span>
+                  </div>
+                </div>
+                <div class="spec-row">
+                  <div class="spec-item">
+                    <span class="spec-label">质保年限</span>
+                    <span class="spec-value">25年</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">抗风等级</span>
+                    <span class="spec-value">2400Pa</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-features-list">
+                <div class="pfl-item">✓ TOPCon高效电池，转换效率行业领先</div>
+                <div class="pfl-item">✓ 超白钢化玻璃封装，耐候性强</div>
+                <div class="pfl-item">✓ 双面发电技术，背面增益可达20%</div>
+                <div class="pfl-item">✓ 通过IEC、TÜV、CE等国际认证</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact', null)">获取报价</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 充电站 -->
+        <div class="product-section" data-cat="cs">
+          <div class="product-detail reverse">
+            <div class="product-detail-visual cs-bg">
+              <div class="product-graphic">
+                <div class="charging-station">
+                  <div class="cs-body">
+                    <div class="cs-screen">
+                      <div class="cs-screen-content">
+                        <div class="charging-bar">
+                          <div class="charging-fill"></div>
+                        </div>
+                        <div class="cs-status">充电中 78%</div>
+                      </div>
+                    </div>
+                    <div class="cs-connectors">
+                      <div class="cs-connector">DC 120kW</div>
+                      <div class="cs-connector">DC 120kW</div>
+                    </div>
+                  </div>
+                  <div class="cs-label">⚡ 元电超充</div>
+                </div>
+              </div>
+            </div>
+            <div class="product-detail-info">
+              <div class="product-cat-badge cs-badge">充电站</div>
+              <h2>智能直流快充站</h2>
+              <p>元电充电站采用模块化设计，支持多枪同时输出，配备先进的能量管理系统。支持V2G双向充放电功能，可与光伏储能系统无缝协同，构建绿色充电生态。</p>
+              <div class="product-specs">
+                <div class="spec-row">
+                  <div class="spec-item">
+                    <span class="spec-label">单枪功率</span>
+                    <span class="spec-value">120kW</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">输出电压</span>
+                    <span class="spec-value">200-1000V</span>
+                  </div>
+                </div>
+                <div class="spec-row">
+                  <div class="spec-item">
+                    <span class="spec-label">防护等级</span>
+                    <span class="spec-value">IP55</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">充电时间</span>
+                    <span class="spec-value">30分钟</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-features-list">
+                <div class="pfl-item">✓ 模块化设计，功率可扩展至360kW</div>
+                <div class="pfl-item">✓ 云端智能管理，远程监控运维</div>
+                <div class="pfl-item">✓ 支持多种支付方式，无感快捷</div>
+                <div class="pfl-item">✓ V2G双向充放电，降低电费成本</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact', null)">获取报价</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 充电桩 -->
+        <div class="product-section" data-cat="cp">
+          <div class="product-detail">
+            <div class="product-detail-visual cp-bg">
+              <div class="product-graphic">
+                <div class="charge-pile">
+                  <div class="cp-top">⚡</div>
+                  <div class="cp-body">
+                    <div class="cp-display">
+                      <div class="cp-power">7kW</div>
+                      <div class="cp-mode">交流充电</div>
+                    </div>
+                  </div>
+                  <div class="cp-cable">
+                    <div class="cable-line"></div>
+                    <div class="plug-icon">🔌</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-detail-info">
+              <div class="product-cat-badge cp-badge">充电桩</div>
+              <h2>家用/商用交流充电桩</h2>
+              <p>元电充电桩系列涵盖7kW家用桩和22kW商用桩，外观简洁时尚，支持智能预约充电，与手机App深度联动，随时掌握充电状态，让充电更便捷安心。</p>
+              <div class="product-specs">
+                <div class="spec-row">
+                  <div class="spec-item">
+                    <span class="spec-label">充电功率</span>
+                    <span class="spec-value">7-22kW</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">防护等级</span>
+                    <span class="spec-value">IP65</span>
+                  </div>
+                </div>
+                <div class="spec-row">
+                  <div class="spec-item">
+                    <span class="spec-label">兼容车型</span>
+                    <span class="spec-value">全兼容</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">保修年限</span>
+                    <span class="spec-value">3年</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-features-list">
+                <div class="pfl-item">✓ 过压/过流/过温多重安全防护</div>
+                <div class="pfl-item">✓ App远程控制，智能预约充电</div>
+                <div class="pfl-item">✓ 多种国标接口，兼容主流电动车</div>
+                <div class="pfl-item">✓ 支持动态调功，合理利用电网资源</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact', null)">获取报价</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 储能设备 -->
+        <div class="product-section" data-cat="es">
+          <div class="product-detail reverse">
+            <div class="product-detail-visual es-bg">
+              <div class="product-graphic">
+                <div class="storage-unit">
+                  <div class="su-cabinet">
+                    <div class="su-cells">
+                      <div class="su-cell" style="--h: 90%"></div>
+                      <div class="su-cell" style="--h: 75%"></div>
+                      <div class="su-cell" style="--h: 85%"></div>
+                      <div class="su-cell" style="--h: 60%"></div>
+                    </div>
+                    <div class="su-label">储能系统</div>
+                  </div>
+                  <div class="su-flow">
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-label">输出稳定电力</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-detail-info">
+              <div class="product-cat-badge es-badge">储能设备</div>
+              <h2>磷酸铁锂储能系统</h2>
+              <p>元电储能系统采用高安全性磷酸铁锂电芯，配备先进BMS电池管理系统，支持并网/离网两种工作模式，是工商业用户削峰填谷、降低电费的最佳选择。</p>
+              <div class="product-specs">
+                <div class="spec-row">
+                  <div class="spec-item">
+                    <span class="spec-label">系统容量</span>
+                    <span class="spec-value">50-5000kWh</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">循环寿命</span>
+                    <span class="spec-value">6000次+</span>
+                  </div>
+                </div>
+                <div class="spec-row">
+                  <div class="spec-item">
+                    <span class="spec-label">充放效率</span>
+                    <span class="spec-value">≥95%</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label">响应时间</span>
+                    <span class="spec-value">&lt;100ms</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-features-list">
+                <div class="pfl-item">✓ 磷酸铁锂高安全电芯，热稳定性佳</div>
+                <div class="pfl-item">✓ BMS智能管理，实时均衡保护</div>
+                <div class="pfl-item">✓ 可与光伏、充电桩无缝联动</div>
+                <div class="pfl-item">✓ 支持峰谷套利，显著降低电费</div>
+              </div>
+              <button class="btn-primary" onclick="showPage('contact', null)">获取报价</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 解决方案 -->
+    <section class="section solutions-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">应用场景</div>
+          <h2 class="section-title">多场景整体解决方案</h2>
+        </div>
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <div class="sol-icon">🏭</div>
+            <h4>工商业储能</h4>
+            <p>削峰填谷，降低工商业用电成本，提升能源利用效率</p>
+          </div>
+          <div class="solution-card">
+            <div class="sol-icon">🏘️</div>
+            <h4>住宅光储充</h4>
+            <p>屋顶光伏+家庭储能+充电桩，打造自给自足的绿色家园</p>
+          </div>
+          <div class="solution-card">
+            <div class="sol-icon">🛣️</div>
+            <h4>高速服务区</h4>
+            <p>光储充一体化超充站，支持多车快速补能，绿色出行保障</p>
+          </div>
+          <div class="solution-card">
+            <div class="sol-icon">🏫</div>
+            <h4>园区微电网</h4>
+            <p>光伏+储能+智慧能管，构建绿色智慧园区能源系统</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== 联系我们 ===== -->
+  <div id="page-contact" class="page">
+
+    <section class="page-hero contact-hero">
+      <div class="page-hero-bg"></div>
+      <div class="page-hero-content">
+        <div class="breadcrumb">首页 / 联系我们</div>
+        <h1>联系我们</h1>
+        <p>期待与您携手，共同开启绿色能源新篇章</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- 联系表单 -->
+          <div class="contact-form-wrap">
+            <div class="section-tag">发送咨询</div>
+            <h2>留下您的需求</h2>
+            <p class="form-subtitle">填写以下信息，我们将在1个工作日内回复您</p>
+            <form class="contact-form" onsubmit="submitForm(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>您的姓名 <span class="required">*</span></label>
+                  <input type="text" placeholder="请输入姓名" required>
+                </div>
+                <div class="form-group">
+                  <label>联系电话 <span class="required">*</span></label>
+                  <input type="tel" placeholder="请输入手机号" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>电子邮箱</label>
+                  <input type="email" placeholder="请输入邮箱地址">
+                </div>
+                <div class="form-group">
+                  <label>所在城市</label>
+                  <input type="text" placeholder="请输入您的城市">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>咨询产品 <span class="required">*</span></label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label"><input type="checkbox" value="pv"> 光伏组件</label>
+                  <label class="checkbox-label"><input type="checkbox" value="cs"> 充电站</label>
+                  <label class="checkbox-label"><input type="checkbox" value="cp"> 充电桩</label>
+                  <label class="checkbox-label"><input type="checkbox" value="es"> 储能设备</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>需求描述</label>
+                <textarea placeholder="请描述您的需求，例如：安装地点、规模大小、预算范围等" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn-primary large full-width">提交咨询</button>
+            </form>
+          </div>
+
+          <!-- 联系信息 -->
+          <div class="contact-info-wrap">
+            <div class="contact-info-card">
+              <h3>联系方式</h3>
+              <div class="contact-info-list">
+                <div class="ci-item">
+                  <div class="ci-icon">📍</div>
+                  <div>
+                    <div class="ci-label">公司地址</div>
+                    <div class="ci-value">浙江省宁波市鄞州区新能源产业园A座12楼</div>
+                  </div>
+                </div>
+                <div class="ci-item">
+                  <div class="ci-icon">📞</div>
+                  <div>
+                    <div class="ci-label">销售热线</div>
+                    <div class="ci-value">400-888-9988</div>
+                  </div>
+                </div>
+                <div class="ci-item">
+                  <div class="ci-icon">📱</div>
+                  <div>
+                    <div class="ci-label">业务手机</div>
+                    <div class="ci-value">138-0574-8888</div>
+                  </div>
+                </div>
+                <div class="ci-item">
+                  <div class="ci-icon">📧</div>
+                  <div>
+                    <div class="ci-label">电子邮箱</div>
+                    <div class="ci-value">info@yuandian-energy.com</div>
+                  </div>
+                </div>
+                <div class="ci-item">
+                  <div class="ci-icon">🕐</div>
+                  <div>
+                    <div class="ci-label">工作时间</div>
+                    <div class="ci-value">周一至周五 09:00 - 18:00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 地图区域 -->
+            <div class="map-card">
+              <div class="map-placeholder">
+                <div class="map-bg">
+                  <div class="map-grid-lines"></div>
+                  <div class="map-pin-container">
+                    <div class="map-pin-pulse"></div>
+                    <div class="map-pin">📍</div>
+                    <div class="map-pin-label">宁波元电新能源</div>
+                  </div>
+                  <div class="map-landmarks">
+                    <div class="landmark" style="top:20%; left:15%">鄞州公园</div>
+                    <div class="landmark" style="top:65%; left:70%">新能源产业园</div>
+                    <div class="landmark" style="top:40%; left:80%">地铁4号线</div>
+                  </div>
+                </div>
+                <div class="map-overlay">
+                  <span>📍 浙江省宁波市鄞州区新能源产业园A座</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 微信二维码 -->
+            <div class="qr-card">
+              <div class="qr-code">
+                <div class="qr-inner">
+                  <div class="qr-pattern">
+                    <div class="qr-corner tl"></div>
+                    <div class="qr-corner tr"></div>
+                    <div class="qr-corner bl"></div>
+                    <div class="qr-dots"></div>
+                  </div>
+                  <div class="qr-logo">⚡</div>
+                </div>
+              </div>
+              <div class="qr-info">
+                <div class="qr-title">扫码关注官方微信</div>
+                <div class="qr-desc">获取最新产品资讯与优惠活动</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-icon">⚡</span>
+              <span>元电新能源</span>
+            </div>
+            <p>专注清洁能源解决方案，以技术驱动绿色未来。光伏组件·充电站·充电桩·储能设备</p>
+            <div class="footer-social">
+              <span class="social-btn">微博</span>
+              <span class="social-btn">微信</span>
+              <span class="social-btn">抖音</span>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>快速导航</h4>
+            <a onclick="showPage('home', null)">首页</a>
+            <a onclick="showPage('about', null)">关于我们</a>
+            <a onclick="showPage('products', null)">产品服务</a>
+            <a onclick="showPage('contact', null)">联系我们</a>
+          </div>
+          <div class="footer-links">
+            <h4>产品中心</h4>
+            <a onclick="showPage('products', null)">光伏组件</a>
+            <a onclick="showPage('products', null)">充电站</a>
+            <a onclick="showPage('products', null)">充电桩</a>
+            <a onclick="showPage('products', null)">储能设备</a>
+          </div>
+          <div class="footer-contact">
+            <h4>联系我们</h4>
+            <p>📞 400-888-9988</p>
+            <p>📧 info@yuandian-energy.com</p>
+            <p>📍 浙江省宁波市鄞州区</p>
+            <p>🕐 周一至周五 09:00-18:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2024 宁波元电新能源有限公司 版权所有 | 浙ICP备XXXXXXXX号</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
+
+  <!-- 提交成功弹窗 -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-box">
+      <div class="modal-icon">✅</div>
+      <h3>提交成功！</h3>
+      <p>感谢您的咨询，我们将在1个工作日内与您联系。</p>
+      <button class="btn-primary" onclick="closeModal()">确 定</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
