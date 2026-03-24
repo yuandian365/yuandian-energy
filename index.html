@@ -60,13 +60,13 @@
       height: 100%; display: flex; align-items: center; justify-content: space-between;
     }
     .nav-logo {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 21px; font-weight: 600; color: var(--text); letter-spacing: -0.5px;
+      display: flex; flex-direction: column; gap: 1px;
+      font-size: 15px; font-weight: 700; color: var(--text); letter-spacing: 0.3px;
+      line-height: 1.2; cursor: pointer;
     }
-    .nav-logo-icon {
-      width: 20px; height: 20px; background: linear-gradient(135deg, #f0b429, #2997ff);
-      border-radius: 4px; display: grid; place-items: center; font-size: 11px; color: #fff;
-      font-weight: 700;
+    .nav-logo-sub {
+      font-size: 9px; font-weight: 500; color: var(--text2);
+      letter-spacing: 3px; text-transform: uppercase;
     }
     .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a {
@@ -402,8 +402,8 @@
   <nav id="nav">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
-        <div class="nav-logo-icon">元</div>
         <span>宁波元电新能源有限公司</span>
+        <span class="nav-logo-sub">YUANDIAN NEW ENERGY</span>
       </a>
       <div class="nav-links">
         <a href="#intro" class="active">关于我们</a>
@@ -631,9 +631,9 @@
     <div class="footer-inner">
       <div class="footer-grid">
         <div>
-          <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
-            <div class="nav-logo-icon">元</div>
-            <span style="font-size:17px; font-weight:600; letter-spacing:-0.5px;">宁波元电新能源有限公司</span>
+          <div style="margin-bottom:16px;">
+            <div style="font-size:17px; font-weight:700; letter-spacing:0.3px;">宁波元电新能源有限公司</div>
+            <div style="font-size:9px; font-weight:500; color:var(--text2); letter-spacing:3px; text-transform:uppercase; margin-top:2px;">YUANDIAN NEW ENERGY</div>
           </div>
           <div class="footer-brand">
             专注光伏组件、储能设备、充电桩及充电站研发制造，
