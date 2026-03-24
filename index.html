@@ -602,7 +602,7 @@
           <a href="mailto:info@yuandian-energy.com" class="btn-apple btn-apple-outline">✉️ 发送邮件</a>
         </div>
       </div>
-      <div style="margin-top:60px; text-align:left; background:var(--bg2); border-radius:24px; padding:40px; class=reveal">
+      <div class="reveal" style="margin-top:60px; text-align:left; background:var(--bg2); border-radius:24px; padding:40px;">
         <h3 style="font-size:24px; font-weight:600; margin-bottom:28px; letter-spacing:-0.02em;">联系我们</h3>
         <div style="display:flex; flex-direction:column; gap:20px;">
           <div>
@@ -665,3 +665,49 @@
             <li><a href="#">浙江省宁波市海曙区</a></li>
           </ul>
         </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <div>© 2024 宁波元电新能源有限公司 版权所有</div>
+        <div class="footer-bottom-links">
+          <a href="#">隐私政策</a>
+          <a href="#">使用条款</a>
+          <a href="#">浙ICP备XXXXXXXX号</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+      revealObserver.observe(el);
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(s => navObserver.observe(s));
+  </script>
+
+</body>
+</html>
