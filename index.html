@@ -35,8 +35,8 @@ img{max-width:100%;display:block}
 .hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mobile-menu{display:none;position:fixed;inset:0;background:rgba(8,8,12,0.98);backdrop-filter:blur(24px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px}
 .mobile-menu.open{display:flex}
-.mobile-menu a{font-size:22px;font-weight:600;color:rgba(245,245,247,0.7);transition:color 0.2s,transform 0.2s;display:block;padding:8px 24px}
-.mobile-menu a:hover{color:#3b82f6;transform:translateX(4px)}
+.mobile-menu a{font-size:22px;font-weight:600;color:rgba(245,245,247,0.7);transition:color 0.2s,transform 0.2s;display:block;width:100%;text-align:center;padding:14px 24px}
+.mobile-menu a:hover{color:#3b82f6;transform:translateX(0)}
 #hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#0a0a0c}
 .hero-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .hero-bg::before{content:'';position:absolute;inset:-50%;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(59,130,246,0.1) 0%,transparent 70%);animation:pulseGlow 6s ease-in-out infinite alternate}
@@ -190,10 +190,11 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,0.04);padding:72
 .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
 }
 @media(max-width:768px){
-.hamburger{display:flex}
+.hamburger{display:flex;margin-left:auto}
 .nav-links,.nav-cta-wrap{display:none!important}
 .hero-inner{padding:100px 20px 60px}
 .hero-title{font-size:clamp(40px,10vw,72px)}
+.intro-visual{width:100%;max-width:100%}
 .hero-subtitle{font-size:clamp(22px,6vw,36px)}
 .hero-tagline{font-size:15px;margin-bottom:36px}
 .hero-actions{flex-direction:column;align-items:center;gap:12px}
@@ -245,7 +246,7 @@ footer{background:#050509;border-top:1px solid rgba(255,255,255,0.04);padding:72
 </div></div></section>
 <section id="feature-banner"><div class="feature-wrap reveal"><h2 class="feature-banner-title">从方案到落地<br/>一路为你护航</h2><p class="feature-banner-desc">专业团队全程跟进，快速响应，灵活定制，<br/>让清洁能源落地更简单。</p><div class="feature-banner-actions"><a href="#contact" class="btn btn-primary">立即咨询</a><a href="#products" class="btn btn-outline">查看产品</a></div></div></section>
 <section id="contact"><div class="contact-inner"><div class="reveal"><span class="section-label">Contact Us</span><h2 class="cta-title">开启绿色能源之旅</h2><p class="cta-desc">无论是工商业项目还是个人需求，<br/>我们的专业顾问随时为您定制清洁能源方案。</p><div class="cta-actions"><a href="tel:15968956796" class="btn btn-primary">159-6895-6796</a><a href="mailto:15968956796@139.com" class="btn btn-outline">发送邮件</a></div></div><div class="contact-card reveal reveal-delay-1"><div class="contact-card-title">联系我们</div><div class="contact-grid"><div class="contact-item"><div class="contact-label">地址</div><div class="contact-value">浙江省宁波市海曙区望春工业园区春华路885号</div></div><div class="contact-item"><div class="contact-label">电话</div><div class="contact-value"><a href="tel:15968956796">159-6895-6796</a></div></div><div class="contact-item"><div class="contact-label">邮箱</div><div class="contact-value"><a href="mailto:15968956796@139.com">15968956796@139.com</a></div></div><div class="contact-item"><div class="contact-label">工作时间</div><div class="contact-value">周一至周六 08:30 - 18:00</div></div></div></div></div></section>
-<footer><div class="footer-inner"><div class="footer-grid"><div><div class="footer-brand">宁波元电新能源有限公司</div><span class="footer-sub">YUANDIAN NEW ENERGY</span><p class="footer-desc">专注光伏组件、储能设备、充电桩及充电站研发制造，为清洁能源时代构建可靠基础设施。</p></div><div><div class="footer-col-title">产品</div><ul class="footer-links"><li><a href="#products">光伏组件</a></li><li><a href="#products">智能充电桩</a></li><li><a href="#products">一体化充电站</a></li><li><a href="#products">储能系统</a></li></ul></div><div><div class="footer-col-title">公司</div><ul class="footer-links"><li><a href="#intro">关于我们</a></li><li><a href="#values">核心优势</a></li><li><a href="#contact">联系我们</a></li></ul></div><div><div class="footer-col-title">联系方式</div><ul class="footer-links"><li><a href="tel:15968956796">159-6895-6796</a></li><li><a href="mailto:15968956796@139.com">15968956796@139.com</a></li><li><a href="#contact">浙江省宁波市海曙区</a></li></ul></div></div><div class="footer-divider"></div><div class="footer-bottom"><div>Copyright 2024 宁波元电新能源有限公司</div><div>Powered by <a href="#">Yuandian New Energy</a></div></div></div></footer>
+<footer><div class="footer-inner"><div class="footer-grid"><div><div class="footer-brand">宁波元电新能源有限公司</div><span class="footer-sub">YUANDIAN NEW ENERGY</span><p class="footer-desc">专注光伏组件、储能设备、充电桩及充电站研发制造，为清洁能源时代构建可靠基础设施。</p></div><div><div class="footer-col-title">产品</div><ul class="footer-links"><li><a href="#products">光伏组件</a></li><li><a href="#products">智能充电桩</a></li><li><a href="#products">一体化充电站</a></li><li><a href="#products">储能系统</a></li></ul></div><div><div class="footer-col-title">公司</div><ul class="footer-links"><li><a href="#intro">关于我们</a></li><li><a href="#values">核心优势</a></li><li><a href="#contact">联系我们</a></li></ul></div><div><div class="footer-col-title">联系方式</div><ul class="footer-links"><li><a href="tel:15968956796">159-6895-6796</a></li><li><a href="mailto:15968956796@139.com">15968956796@139.com</a></li><li><a href="#contact">浙江省宁波市海曙区</a></li></ul></div></div><div class="footer-divider"></div><div class="footer-bottom"><div>Copyright 2024 宁波元电新能源有限公司</div><div>Powered by Yuandian New Energy</div></div></div></footer>
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">&#8593;</button>
 <script>
 (function(){
